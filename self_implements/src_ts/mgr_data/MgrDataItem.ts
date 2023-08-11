@@ -38,7 +38,7 @@ namespace MgrDataItem {
     /**
      * 当前案例
      */
-    export const CURRENT_DEMO = new MgrDataItem ({
+    export const CURRENT_DEMO = new MgrDataItem <string> ({
         key: `CURRENT_DEMO_${VERSION}`,
         defVal: null
     });

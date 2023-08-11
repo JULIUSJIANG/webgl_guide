@@ -1,5 +1,5 @@
 import NodeModules from "../NodeModules.js";
-import DemoGlobal from "../demo/DemoGlobal.js";
+import IndexGlobal from "../IndexGlobal.js";
 import DomDefine from "./DomDefine.js";
 /**
  * 右边栏 - 图片预览
@@ -13,11 +13,10 @@ class DomRightPreview extends NodeModules.react.Component {
         this.webglCanvasRef = NodeModules.react.createRef();
     }
     componentDidMount() {
-        DemoGlobal.ctxWebgl = this.webglCanvasRef.current.getContext(`webgl`);
-        this.componentDidUpdate();
+        IndexGlobal.webgl.currStatus.onCanvas(this.webglCanvasRef.current);
     }
     componentDidUpdate() {
-        DemoGlobal.onDraw();
+        IndexGlobal.webgl.currStatus.onRefresh();
     }
     render() {
         // 滚动视图的容器

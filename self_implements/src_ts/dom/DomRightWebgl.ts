@@ -1,5 +1,9 @@
 import NodeModules from "../NodeModules.js";
-import DemoGlobal from "../demo/DemoGlobal.js";
+import JWebgl from "../common/JWebgl.js";
+import IndexGlobal from "../IndexGlobal.js";
+import JWebglDemoInstanceRecord from "../common/JWebglDemoInstanceRecord.js";
+import MgrData from "../mgr_data/MgrData.js";
+import MgrDataItem from "../mgr_data/MgrDataItem.js";
 import DomDefine from "./DomDefine.js";
 
 /**
@@ -12,12 +16,11 @@ class DomRightPreview extends NodeModules.react.Component {
     webglCanvasRef = NodeModules.react.createRef ();
 
     componentDidMount () {
-        DemoGlobal.ctxWebgl = this.webglCanvasRef.current.getContext (`webgl`);
-        this.componentDidUpdate ();
+        IndexGlobal.webgl.currStatus.onCanvas (this.webglCanvasRef.current);
     }
 
     componentDidUpdate () {
-        DemoGlobal.onDraw ();
+        IndexGlobal.webgl.currStatus.onRefresh ();
     }
 
     render () {

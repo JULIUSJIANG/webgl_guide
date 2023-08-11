@@ -2,7 +2,7 @@ import NodeModules from "../NodeModules.js";
 import MgrData from "../mgr_data/MgrData.js";
 import MgrDataItem from "../mgr_data/MgrDataItem.js";
 import DomDefine from "./DomDefine.js";
-import DemoGlobal from "../demo/DemoGlobal.js";
+import IndexGlobal from "../IndexGlobal.js";
 
 /**
  * 左边栏 - 存档列表
@@ -11,8 +11,8 @@ class DomLeftListRecord extends NodeModules.react.Component {
 
     render () {
         let listChildren: Array <any> = new Array ();
-        for (let i = 0; i < DemoGlobal.listAllRecord.length; i++) {
-            let listRecordI = DemoGlobal.listAllRecord [i];
+        for (let i = 0; i < IndexGlobal.webgl.listAllRecord.length; i++) {
+            let listRecordI = IndexGlobal.webgl.listAllRecord [i];
             let propsBtn = {
                 onClick: () => {
                     MgrData.inst.set (MgrDataItem.CURRENT_DEMO, listRecordI.inst.getName ());
@@ -31,7 +31,7 @@ class DomLeftListRecord extends NodeModules.react.Component {
                 }
             };
             // 不是最后一位的话，要保留间距
-            if (i != DemoGlobal.listAllRecord.length - 1) {
+            if (i != IndexGlobal.webgl.listAllRecord.length - 1) {
                 propsDiv.style [DomDefine.STYLE_MARGIN_BOTTOM] = DomDefine.CONFIG_TXT_SPACING;
             };
             listChildren.push (NodeModules.react.createElement (
