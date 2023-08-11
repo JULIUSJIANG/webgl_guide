@@ -41,11 +41,8 @@ export default class P47ClickPoint extends JWebglDemoInstance {
     /**
      * 着色器程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onDraw (): void {
         for (let i = 0; i < this._listPoints.length; i += 2) {

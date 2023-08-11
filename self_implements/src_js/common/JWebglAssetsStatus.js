@@ -3,7 +3,7 @@
  */
 export default class JWebglAssetsStatus {
     constructor(relMachine) {
-        this.relMachine = relMachine;
+        this.relAssets = relMachine;
     }
     /**
      * 事件派发 - 离开状态

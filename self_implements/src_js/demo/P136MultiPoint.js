@@ -47,11 +47,11 @@ export default class P136MultiPoint extends JWebglDemoInstance {
     getName() {
         return `P136MultiPoint`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         this.program.fillAttByBuffer(this.vertices);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, this.vertices.length / this.program.attTotalSize);
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P136MultiPoint.prototype, "program", void 0);

@@ -38,6 +38,12 @@ export default class P102Matrix extends JWebglDemoInstance {
     }
 
     /**
+     * 着色程序
+     */
+    @JWebglDemoInstance.program (Program)
+    program: Program;
+
+    /**
      * 顶点数据
      */
     vertices = new Float32Array ([
@@ -47,14 +53,8 @@ export default class P102Matrix extends JWebglDemoInstance {
     ]);
 
     /**
-     * 着色程序
+     * 旋转角
      */
-    program: Program;
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
-
     angle = 90;
     
     onDraw (): void {

@@ -41,6 +41,7 @@ export default class P133MultiPoint extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
 
     /**
@@ -58,10 +59,6 @@ export default class P133MultiPoint extends JWebglDemoInstance {
     sizes = new Float32Array ([
         10, 20, 30
     ]);
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onDraw (): void {
         this.program.a_Position.fillByBuffer (this.vertices);

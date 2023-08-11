@@ -41,6 +41,12 @@ export default class P120Animate extends JWebglDemoInstance {
     }
 
     /**
+     * 着色程序
+     */
+    @JWebglDemoInstance.program (Program)
+    program: Program;
+
+    /**
      * 顶点数据
      */
     vertices = new Float32Array ([
@@ -48,11 +54,6 @@ export default class P120Animate extends JWebglDemoInstance {
         -0.3, -0.3, 0.0, 1.0,
         0.3, -0.3, 0.0, 1.0
     ]);
-
-    /**
-     * 着色程序
-     */
-    program: Program;
 
     /**
      * 变换矩阵
@@ -63,10 +64,6 @@ export default class P120Animate extends JWebglDemoInstance {
      * 当前旋转角
      */
     angle: number = 0;
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onUpdate (dt: number): void {
         this.angle += dt / 1000 * 45;

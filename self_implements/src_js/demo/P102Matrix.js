@@ -42,13 +42,13 @@ export default class P102Matrix extends JWebglDemoInstance {
             -0.5, -0.5, 0.0, 1.0,
             0.5, -0.5, 0.0, 1.0
         ]);
+        /**
+         * 旋转角
+         */
         this.angle = 90;
     }
     getName() {
         return `P102Matrix`;
-    }
-    onInit() {
-        this.program = this.createProgram(Program);
     }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
@@ -59,3 +59,6 @@ export default class P102Matrix extends JWebglDemoInstance {
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P102Matrix.prototype, "program", void 0);

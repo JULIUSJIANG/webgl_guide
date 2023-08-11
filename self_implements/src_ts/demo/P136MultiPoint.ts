@@ -41,6 +41,7 @@ export default class P136MultiPoint extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
 
     /**
@@ -51,10 +52,6 @@ export default class P136MultiPoint extends JWebglDemoInstance {
         -0.5, -0.5,  0.0,  1.0,    20,
          0.5, -0.5,  0.0,  1.0,    30
     ]);
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onDraw (): void {
         this.program.fillAttByBuffer (this.vertices);

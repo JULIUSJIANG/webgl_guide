@@ -51,10 +51,10 @@ export default class P141Varying extends JWebglDemoInstance {
     getName() {
         return `P141Varying`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         this.program.drawArrays(JWebglEnum.DrawArraysMode.TRIANGLES, this.vertices);
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P141Varying.prototype, "program", void 0);

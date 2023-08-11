@@ -35,11 +35,11 @@ export default class P39Point extends JWebglDemoInstance {
     getName() {
         return `P39Point`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         this.program.a_Position.fillByVec4(0.5, 0.5, 0, 1);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, 1);
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P39Point.prototype, "program", void 0);

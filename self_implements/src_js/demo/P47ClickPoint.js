@@ -40,9 +40,6 @@ export default class P47ClickPoint extends JWebglDemoInstance {
     getName() {
         return `P47ClickPoint`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         for (let i = 0; i < this._listPoints.length; i += 2) {
             let x = this._listPoints[i + 0];
@@ -57,3 +54,6 @@ export default class P47ClickPoint extends JWebglDemoInstance {
         MgrData.inst.dataVersion++;
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P47ClickPoint.prototype, "program", void 0);

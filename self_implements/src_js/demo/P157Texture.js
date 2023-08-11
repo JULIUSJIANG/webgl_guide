@@ -4,12 +4,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import JWebglProgram from "../common/JWebglProgram";
-import JWebglProgramAttributeVec2 from "../common/JWebglProgramAttributeVec2";
-import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4";
-import JWebglProgramUniformSampler2D from "../common/JWebglProgramUniformSampler2D";
-import JWebglProgramVaryingVec2 from "../common/JWebglProgramVaryingVec2";
-import JWebglDemoInstance from "../common/JWebglDemoInstance";
+import JWebglProgram from "../common/JWebglProgram.js";
+import JWebglProgramAttributeVec2 from "../common/JWebglProgramAttributeVec2.js";
+import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4.js";
+import JWebglProgramUniformSampler2D from "../common/JWebglProgramUniformSampler2D.js";
+import JWebglProgramVaryingVec2 from "../common/JWebglProgramVaryingVec2.js";
+import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
+import JWebglEnum from "../common/JWebglEnum.js";
 class Program extends JWebglProgram {
     onGetShaderVTxt() {
         return `
@@ -55,10 +56,11 @@ export default class P157Texture extends JWebglDemoInstance {
     getName() {
         return `P157Texture`;
     }
-    onInit() {
-        this.img = this.relWebgl.getImage(`./resources/sky.jpg`);
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
+        this.program.u_Sampler.fill(`./resources/sky.jpg`, 0);
+        this.program.drawArrays(JWebglEnum.DrawArraysMode.TRIANGLE_STRIP, this.vertices);
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P157Texture.prototype, "program", void 0);

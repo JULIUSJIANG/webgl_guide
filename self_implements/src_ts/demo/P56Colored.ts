@@ -45,26 +45,12 @@ export default class P56Colored extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
 
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
-
-    onDraw (): void {
-        for (let i = 0; i < this._listPoints.length; i += 6) {
-            let x = this._listPoints [i + 0];
-            let y = this._listPoints [i + 1];
-            let r = this._listPoints [i + 2];
-            let g = this._listPoints [i + 3];
-            let b = this._listPoints [i + 4];
-            let a = this._listPoints [i + 5];
-            this.program.a_Position.fillByVec4 (x, y, 0, 1);
-            this.program.u_FragColor.fill (r, g, b, a);
-            this.relWebgl.drawArrays (this.program, JWebglEnum.DrawArraysMode.POINTS, 0, 1);
-        };
-    }
-
+    /**
+     * 交互位置的记录
+     */
     _listPoints = new Array <number> ();
 
     onTouchStart (): void {
@@ -79,5 +65,19 @@ export default class P56Colored extends JWebglDemoInstance {
             this._listPoints.push (0, 0, 1, 1);
         };
         MgrData.inst.dataVersion++;
+    }
+
+    onDraw (): void {
+        for (let i = 0; i < this._listPoints.length; i += 6) {
+            let x = this._listPoints [i + 0];
+            let y = this._listPoints [i + 1];
+            let r = this._listPoints [i + 2];
+            let g = this._listPoints [i + 3];
+            let b = this._listPoints [i + 4];
+            let a = this._listPoints [i + 5];
+            this.program.a_Position.fillByVec4 (x, y, 0, 1);
+            this.program.u_FragColor.fill (r, g, b, a);
+            this.relWebgl.drawArrays (this.program, JWebglEnum.DrawArraysMode.POINTS, 0, 1);
+        };
     }
 }

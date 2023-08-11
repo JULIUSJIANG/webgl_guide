@@ -32,6 +32,14 @@ class JWebglDemoInstance {
     onGetBgColor() {
         return COLOR;
     }
+    _onInit() {
+        let symbolCache = JWebglDemoInstance.getCache(this);
+        symbolCache.mapKeyNameToProgramClass.forEach((programClass, propsName) => {
+            let program = this.createProgram(programClass);
+            this[propsName] = program;
+        });
+        this.onInit();
+    }
     /**
      * 事件派发 - 初始化
      */
@@ -74,4 +82,35 @@ class JWebglDemoInstance {
     onTouchEnd() {
     }
 }
+(function (JWebglDemoInstance) {
+    const SYMBOL_KEY = Symbol(`JWebglDemoInstance.SYMBOL_KEY`);
+    /**
+     * 获取缓存数据
+     * @param c
+     * @returns
+     */
+    function getCache(c) {
+        if (!c[SYMBOL_KEY]) {
+            let cache = {
+                mapKeyNameToProgramClass: new Map()
+            };
+            c[SYMBOL_KEY] = cache;
+        }
+        ;
+        return c[SYMBOL_KEY];
+    }
+    JWebglDemoInstance.getCache = getCache;
+    /**
+     * 着色程序
+     * @param t
+     * @returns
+     */
+    function program(t) {
+        return function decorator(inst, propsName) {
+            let cache = getCache(inst);
+            cache.mapKeyNameToProgramClass.set(propsName, t);
+        };
+    }
+    JWebglDemoInstance.program = program;
+})(JWebglDemoInstance || (JWebglDemoInstance = {}));
 export default JWebglDemoInstance;

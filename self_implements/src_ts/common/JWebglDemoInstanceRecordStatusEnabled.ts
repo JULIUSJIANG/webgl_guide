@@ -14,7 +14,7 @@ class JWebglDemoInstanceRecordStatusEnabled extends JWebglDemoInstanceRecordStat
     onEnter (): void {
         if (!this._isInited) {
             this._isInited = true;
-            this.relMachine.inst.onInit ();
+            this.relMachine.inst._onInit ();
         };
         this.relMachine.inst.onEnable ();
     }

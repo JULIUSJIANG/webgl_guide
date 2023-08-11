@@ -1,11 +1,10 @@
-import JWebglAssetsImage from "../common/JWebglAssetsImage";
-import JWebglProgram from "../common/JWebglProgram";
-import JWebglProgramAttributeVec2 from "../common/JWebglProgramAttributeVec2";
-import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4";
-import JWebglProgramUniformSampler2D from "../common/JWebglProgramUniformSampler2D";
-import JWebglProgramVaryingVec2 from "../common/JWebglProgramVaryingVec2";
-import IndexGlobal from "../IndexGlobal";
-import JWebglDemoInstance from "../common/JWebglDemoInstance";
+import JWebglProgram from "../common/JWebglProgram.js";
+import JWebglProgramAttributeVec2 from "../common/JWebglProgramAttributeVec2.js";
+import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4.js";
+import JWebglProgramUniformSampler2D from "../common/JWebglProgramUniformSampler2D.js";
+import JWebglProgramVaryingVec2 from "../common/JWebglProgramVaryingVec2.js";
+import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
+import JWebglEnum from "../common/JWebglEnum.js";
 
 class Program extends JWebglProgram {
 
@@ -48,6 +47,7 @@ export default class P157Texture extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
 
     /**
@@ -60,14 +60,8 @@ export default class P157Texture extends JWebglDemoInstance {
          0.5, -0.5, 0, 1,    1.0, 0.0
     ]);
 
-    img: JWebglAssetsImage;
-
-    onInit () {
-        this.img = this.relWebgl.getImage (`./resources/sky.jpg`);
-        this.program = this.createProgram (Program);
-    }
-
     onDraw (): void {
-        
+        this.program.u_Sampler.fill (`./resources/sky.jpg`, 0);
+        this.program.drawArrays (JWebglEnum.DrawArraysMode.TRIANGLE_STRIP, this.vertices);
     }
 }

@@ -38,11 +38,8 @@ export default class P24Point extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onDraw (): void {
         this.relWebgl.drawArrays (this.program, JWebglEnum.DrawArraysMode.POINTS, 0, 1);

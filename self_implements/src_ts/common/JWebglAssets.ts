@@ -1,3 +1,4 @@
+import JWebgl from "./JWebgl.js";
 import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
 import JWebglAssetsStatusFinished from "./JWebglAssetsStatusFinished.js";
 import JWebglAssetsStatusLoading from "./JWebglAssetsStatusLoading.js";
@@ -7,7 +8,14 @@ import JWebglAssetsStatusLoading from "./JWebglAssetsStatusLoading.js";
  */
 export default class JWebglAssets {
 
-    constructor () {
+    /**
+     * 归属的环境
+     */
+    relWebgl: JWebgl;
+
+    constructor (webgl: JWebgl) {
+        this.relWebgl = webgl;
+
         this.statusLoading = new JWebglAssetsStatusLoading (this);
         this.statusFinished = new JWebglAssetsStatusFinished (this);
         this.enter (this.statusLoading);

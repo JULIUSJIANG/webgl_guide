@@ -42,11 +42,11 @@ export default class P80Triangle extends JWebglDemoInstance {
     getName() {
         return `P80Triangle`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P80Triangle.prototype, "program", void 0);

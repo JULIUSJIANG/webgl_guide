@@ -11,7 +11,7 @@ export default class JWebglProgramAttributeVec2 extends JWebglProgramAttribute {
     }
 
     onGetSize (): number {
-        return 4;
+        return 2;
     }
 
     onGetType (): JWebglEnum.VertexAttriPointerType {

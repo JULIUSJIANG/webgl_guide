@@ -1,3 +1,4 @@
+import MgrData from "../mgr_data/MgrData.js";
 import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
 
 /**
@@ -5,4 +6,7 @@ import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
  */
 export default class JWebglAssetsStatusFinished extends JWebglAssetsStatus {
 
+    onEnter (): void {
+        MgrData.inst.dataVersion++;
+    }
 }

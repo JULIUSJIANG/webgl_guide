@@ -7,11 +7,6 @@ import JWebglEnum from "./JWebglEnum.js";
  */
 export default class JWebglAssetsImage extends JWebglAssets {
     /**
-     * 归属的 webgl
-     */
-    relWebgl: JWebgl
-
-    /**
      * 资源路径
      */
     src: string;
@@ -31,7 +26,7 @@ export default class JWebglAssetsImage extends JWebglAssets {
         src: string
     }) 
     {
-        super ();
+        super (args.webgl);
         this.relWebgl = args.webgl;
         this.src = args.src;
         
@@ -41,13 +36,13 @@ export default class JWebglAssetsImage extends JWebglAssets {
             return;
         };
 
-        this.image.onload = () => {
-            this.texture = this.relWebgl.ctx.createTexture ();
-            if (!this.texture) {
-                this.relWebgl.error (`创建纹理失败`);
-                return;
-            };
+        this.texture = this.relWebgl.ctx.createTexture ();
+        if (!this.texture) {
+            this.relWebgl.error (`创建纹理失败`);
+            return;
+        };
 
+        this.image.onload = () => {
             this.relWebgl.ctx.pixelStorei (JWebglEnum.PixelStoreIPName.UNPACK_FLIP_Y_WEBGL, 1);
             this.relWebgl.ctx.activeTexture (JWebglEnum.ActiveTexture.TEXTURE0);
             this.relWebgl.ctx.bindTexture (JWebglEnum.BindTexture.TEXTURE_2D, this.texture);
@@ -55,5 +50,6 @@ export default class JWebglAssetsImage extends JWebglAssets {
             this.relWebgl.ctx.texImage2D (JWebglEnum.BindTexture.TEXTURE_2D, 0, JWebglEnum.TexImage2DFormat.RGB, JWebglEnum.TexImage2DFormat.RGB, JWebglEnum.VertexAttriPointerType.UNSIGNED_BYTE, this.image);
             this.currStatus.onLoadFinish ();
         };
+        this.image.src = this.src;
     }
 }

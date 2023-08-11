@@ -39,6 +39,12 @@ export default class P115Matrix extends JWebglDemoInstance {
     }
 
     /**
+     * 着色程序
+     */
+    @JWebglDemoInstance.program (Program)
+    program: Program;
+
+    /**
      * 顶点数据
      */
     vertices = new Float32Array ([
@@ -48,18 +54,9 @@ export default class P115Matrix extends JWebglDemoInstance {
     ]);
 
     /**
-     * 着色程序
-     */
-    program: Program;
-
-    /**
      * 变换矩阵
      */
     mat4 = new JWebglMatrix4 ();
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
     
     onDraw (): void {
         this.program.a_Position.fillByBuffer (this.vertices);

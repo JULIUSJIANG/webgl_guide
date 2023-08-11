@@ -18,6 +18,7 @@ import P120Animate from "../demo/P120Animate.js";
 import P133MultiPoint from "../demo/P133MultiPoint.js";
 import P136MultiPoint from "../demo/P136MultiPoint.js";
 import P141Varying from "../demo/P141Varying.js";
+import P157Texture from "../demo/P157Texture.js";
 /**
  * 示例的执行环境
  */
@@ -59,7 +60,8 @@ class JWebgl {
             P120Animate,
             P133MultiPoint,
             P136MultiPoint,
-            P141Varying
+            P141Varying,
+            P157Texture
         ];
         for (let i = 0; i < listDemo.length; i++) {
             let listDemoI = listDemo[i];

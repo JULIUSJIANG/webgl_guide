@@ -51,9 +51,6 @@ export default class P115Matrix extends JWebglDemoInstance {
     getName() {
         return `P115Matrix`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         // this.mat4.setIdentity ();
@@ -63,3 +60,6 @@ export default class P115Matrix extends JWebglDemoInstance {
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P115Matrix.prototype, "program", void 0);

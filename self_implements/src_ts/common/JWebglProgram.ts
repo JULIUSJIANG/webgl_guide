@@ -224,7 +224,7 @@ abstract class JWebglProgram {
 
 namespace JWebglProgram {
 
-    export const SYMBOL_KEY = `JWebglProgram.SYMBOL_KEY`;
+    const SYMBOL_KEY = Symbol (`JWebglProgram.SYMBOL_KEY`);
 
     /**
      * 原型上的记录

@@ -57,6 +57,14 @@ abstract class JWebglDemoInstance {
         return COLOR;
     }
 
+    _onInit () {
+        let symbolCache = JWebglDemoInstance.getCache (this);
+        symbolCache.mapKeyNameToProgramClass.forEach ((programClass, propsName) => {
+            let program = this.createProgram (programClass);
+            this [propsName] = program;
+        });
+        this.onInit ();
+    }
     /**
      * 事件派发 - 初始化
      */
@@ -112,6 +120,48 @@ abstract class JWebglDemoInstance {
      */
     onTouchEnd () {
 
+    }
+}
+
+namespace JWebglDemoInstance {
+
+    const SYMBOL_KEY = Symbol (`JWebglDemoInstance.SYMBOL_KEY`);
+
+    /**
+     * 原型上的记录
+     */
+    export interface SymbolCache {
+        /**
+         * 属性名到着色程序类的映射
+         */
+        mapKeyNameToProgramClass: Map <string, typeof JWebglProgram>;
+    }
+
+    /**
+     * 获取缓存数据
+     * @param c 
+     * @returns 
+     */
+    export function getCache (c): SymbolCache {
+        if (!c [SYMBOL_KEY]) {
+            let cache: SymbolCache = {
+                mapKeyNameToProgramClass: new Map ()
+            };
+            c [SYMBOL_KEY] = cache;
+        };
+        return c [SYMBOL_KEY];
+    }
+
+    /**
+     * 着色程序
+     * @param t 
+     * @returns 
+     */
+    export function program <T extends typeof JWebglProgram> (t: T) {
+        return function decorator (inst: JWebglDemoInstance, propsName: string) {
+            let cache = getCache (inst);
+            cache.mapKeyNameToProgramClass.set (propsName, t);
+        };
     }
 }
 

@@ -48,13 +48,13 @@ export default class P94Rotate extends JWebglDemoInstance {
             -0.5, -0.5, 0.0, 1.0,
             0.5, -0.5, 0.0, 1.0
         ]);
+        /**
+         * 旋转角
+         */
         this.angle = 90;
     }
     getName() {
         return `P94Rotate`;
-    }
-    onInit() {
-        this.program = this.createProgram(Program);
     }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
@@ -66,3 +66,6 @@ export default class P94Rotate extends JWebglDemoInstance {
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P94Rotate.prototype, "program", void 0);

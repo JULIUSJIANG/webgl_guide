@@ -45,6 +45,7 @@ export default class P94Rotate extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
 
     /**
@@ -56,10 +57,9 @@ export default class P94Rotate extends JWebglDemoInstance {
         0.5, -0.5, 0.0, 1.0
     ]);
 
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
-
+    /**
+     * 旋转角
+     */
     angle = 90;
     
     onDraw (): void {

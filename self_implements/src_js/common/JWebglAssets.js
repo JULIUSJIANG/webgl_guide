@@ -4,7 +4,8 @@ import JWebglAssetsStatusLoading from "./JWebglAssetsStatusLoading.js";
  * 资源数据
  */
 export default class JWebglAssets {
-    constructor() {
+    constructor(webgl) {
+        this.relWebgl = webgl;
         this.statusLoading = new JWebglAssetsStatusLoading(this);
         this.statusFinished = new JWebglAssetsStatusFinished(this);
         this.enter(this.statusLoading);

@@ -46,12 +46,12 @@ export default class P88Translate extends JWebglDemoInstance {
     getName() {
         return `P88Translate`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.program.u_Translation.fill(0.2, 0.2, 0.2, 0);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P88Translate.prototype, "program", void 0);

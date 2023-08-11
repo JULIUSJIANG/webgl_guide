@@ -169,23 +169,23 @@ class JWebglProgram {
     }
 }
 (function (JWebglProgram) {
-    JWebglProgram.SYMBOL_KEY = `JWebglProgram.SYMBOL_KEY`;
+    const SYMBOL_KEY = Symbol(`JWebglProgram.SYMBOL_KEY`);
     /**
      * 获取类上面的枚举缓存
      * @param c
      * @returns
      */
     function getCache(c) {
-        if (!c[JWebglProgram.SYMBOL_KEY]) {
+        if (!c[SYMBOL_KEY]) {
             let cache = {
                 mapKeyNameToAttributeClass: new Map(),
                 mapKeyNameToUniformClass: new Map(),
                 mapKeyNameToVaryingClass: new Map()
             };
-            c[JWebglProgram.SYMBOL_KEY] = cache;
+            c[SYMBOL_KEY] = cache;
         }
         ;
-        return c[JWebglProgram.SYMBOL_KEY];
+        return c[SYMBOL_KEY];
     }
     JWebglProgram.getCache = getCache;
     /**

@@ -56,9 +56,6 @@ export default class P120Animate extends JWebglDemoInstance {
     getName() {
         return `P120Animate`;
     }
-    onInit() {
-        this.program = this.createProgram(Program);
-    }
     onUpdate(dt) {
         this.angle += dt / 1000 * 45;
         MgrData.inst.dataVersion++;
@@ -70,3 +67,6 @@ export default class P120Animate extends JWebglDemoInstance {
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());
     }
 }
+__decorate([
+    JWebglDemoInstance.program(Program)
+], P120Animate.prototype, "program", void 0);

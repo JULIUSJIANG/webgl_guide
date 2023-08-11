@@ -4,6 +4,6 @@ import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
  */
 export default class JWebglAssetsStatusLoading extends JWebglAssetsStatus {
     onLoadFinish() {
-        this.relMachine.enter(this.relMachine.statusFinished);
+        this.relAssets.enter(this.relAssets.statusFinished);
     }
 }

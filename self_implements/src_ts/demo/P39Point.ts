@@ -40,11 +40,8 @@ export default class P39Point extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onDraw (): void {
         this.program.a_Position.fillByVec4 (0.5, 0.5, 0, 1);

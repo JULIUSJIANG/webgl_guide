@@ -8,10 +8,10 @@ export default abstract class JWebglAssetsStatus {
     /**
      * 归属的状态机
      */
-    relMachine: JWebglAssets;
+    relAssets: JWebglAssets;
 
     constructor (relMachine: JWebglAssets) {
-        this.relMachine = relMachine;
+        this.relAssets = relMachine;
     }
 
     /**

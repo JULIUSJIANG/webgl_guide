@@ -40,6 +40,7 @@ export default class P88Translate extends JWebglDemoInstance {
     /**
      * 着色程序
      */
+    @JWebglDemoInstance.program (Program)
     program: Program;
 
     /**
@@ -50,10 +51,6 @@ export default class P88Translate extends JWebglDemoInstance {
         -0.5, -0.5, 0.0, 1.0,
         0.5, -0.5, 0.0, 1.0
     ]);
-
-    onInit (): void {
-        this.program = this.createProgram (Program);
-    }
 
     onDraw (): void {
         this.program.a_Position.fillByBuffer (this.vertices);
