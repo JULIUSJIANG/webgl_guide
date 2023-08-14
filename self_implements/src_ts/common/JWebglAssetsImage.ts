@@ -43,11 +43,12 @@ export default class JWebglAssetsImage extends JWebglAssets {
         };
 
         this.image.onload = () => {
+            // y 轴反转
             this.relWebgl.ctx.pixelStorei (JWebglEnum.PixelStoreIPName.UNPACK_FLIP_Y_WEBGL, 1);
             this.relWebgl.ctx.activeTexture (JWebglEnum.ActiveTexture.TEXTURE0);
             this.relWebgl.ctx.bindTexture (JWebglEnum.BindTexture.TEXTURE_2D, this.texture);
             this.relWebgl.ctx.texParameteri (JWebglEnum.BindTexture.TEXTURE_2D, JWebglEnum.TexParameteriPName.TEXTURE_MIN_FILTER, JWebglEnum.TexParameteriParam.LINEAR);
-            this.relWebgl.ctx.texImage2D (JWebglEnum.BindTexture.TEXTURE_2D, 0, JWebglEnum.TexImage2DFormat.RGB, JWebglEnum.TexImage2DFormat.RGB, JWebglEnum.VertexAttriPointerType.UNSIGNED_BYTE, this.image);
+            this.relWebgl.ctx.texImage2D (JWebglEnum.BindTexture.TEXTURE_2D, 0, JWebglEnum.TexImage2DFormat.RGBA, JWebglEnum.TexImage2DFormat.RGBA, JWebglEnum.VertexAttriPointerType.UNSIGNED_BYTE, this.image);
             this.currStatus.onLoadFinish ();
         };
         this.image.src = this.src;

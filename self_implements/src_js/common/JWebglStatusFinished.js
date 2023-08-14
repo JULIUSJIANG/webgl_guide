@@ -7,6 +7,12 @@ import JWebglStatus from "./JWebglStatus.js";
  */
 export default class JWebglStatusFinished extends JWebglStatus {
     onEnter() {
+        this.relWebgl.ctx.enable(JWebglEnum.EnableCap.DEPTH_TEST);
+        this.relWebgl.ctx.enable(JWebglEnum.EnableCap.BLEND);
+        this.relWebgl.ctx.blendFunc(JWebglEnum.BlendFunc.SRC_ALPHA, JWebglEnum.BlendFunc.ONE_MINUS_SRC_ALPHA);
+        document.onkeydown = (e) => {
+            this.relWebgl.currentDemo.inst.onKeyDown(e.key);
+        };
         this.relWebgl.canvas.onmousedown = (ev) => {
             this.relWebgl.touchStart.fill(ev);
             this.relWebgl.currentTouch = this.relWebgl.touchStart;
@@ -60,7 +66,7 @@ export default class JWebglStatusFinished extends JWebglStatus {
         this.relWebgl.canvas.height = size[1];
         this.relWebgl.ctx.viewport(0, 0, size[0], size[1]);
         this.relWebgl.ctx.clearColor(color[0], color[1], color[2], color[3]);
-        this.relWebgl.ctx.clear(JWebglEnum.ClearMask.COLOR_BUFFER_BIT);
+        this.relWebgl.ctx.clear(JWebglEnum.ClearMask.COLOR_BUFFER_BIT | JWebglEnum.ClearMask.DEPTH_BUFFER_BIT);
         this.relWebgl.currentDemo.inst.onDraw();
     }
 }

@@ -81,6 +81,12 @@ class JWebglDemoInstance {
      */
     onTouchEnd() {
     }
+    /**
+     * 按下按钮
+     * @param key
+     */
+    onKeyDown(key) {
+    }
 }
 (function (JWebglDemoInstance) {
     const SYMBOL_KEY = Symbol(`JWebglDemoInstance.SYMBOL_KEY`);

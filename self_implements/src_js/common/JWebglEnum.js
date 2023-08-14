@@ -2,15 +2,87 @@ import JWebglDefine from "./JWebglDefine.js";
 /**
  * 其实就是 JWebglDefine 基础上的分类
  */
-JWebglDefine.TEXTURE_2D;
+JWebglDefine.POLYGON_OFFSET_FILL;
 var JWebglEnum;
 (function (JWebglEnum) {
+    /**
+     * 深度缓冲区的绑定
+     */
+    let FramebufferRenderbufferAttachment;
+    (function (FramebufferRenderbufferAttachment) {
+        FramebufferRenderbufferAttachment[FramebufferRenderbufferAttachment["DEPTH_ATTACHMENT"] = JWebglDefine.DEPTH_ATTACHMENT] = "DEPTH_ATTACHMENT";
+    })(FramebufferRenderbufferAttachment = JWebglEnum.FramebufferRenderbufferAttachment || (JWebglEnum.FramebufferRenderbufferAttachment = {}));
+    ;
+    /**
+     * 帧缓冲区的绑定
+     */
+    let FramebufferTexture2DAttachment;
+    (function (FramebufferTexture2DAttachment) {
+        FramebufferTexture2DAttachment[FramebufferTexture2DAttachment["COLOR_ATTACHMENT0"] = JWebglDefine.COLOR_ATTACHMENT0] = "COLOR_ATTACHMENT0";
+    })(FramebufferTexture2DAttachment = JWebglEnum.FramebufferTexture2DAttachment || (JWebglEnum.FramebufferTexture2DAttachment = {}));
+    ;
+    /**
+     * 帧缓冲区
+     */
+    let BindFramebufferTarget;
+    (function (BindFramebufferTarget) {
+        BindFramebufferTarget[BindFramebufferTarget["FRAMEBUFFER"] = JWebglDefine.FRAMEBUFFER] = "FRAMEBUFFER";
+    })(BindFramebufferTarget = JWebglEnum.BindFramebufferTarget || (JWebglEnum.BindFramebufferTarget = {}));
+    ;
+    /**
+     * 渲染缓冲区格式
+     */
+    let RenderbufferStorageInternalFormat;
+    (function (RenderbufferStorageInternalFormat) {
+        RenderbufferStorageInternalFormat[RenderbufferStorageInternalFormat["DEPTH_COMPONENT16"] = JWebglDefine.DEPTH_COMPONENT16] = "DEPTH_COMPONENT16";
+    })(RenderbufferStorageInternalFormat = JWebglEnum.RenderbufferStorageInternalFormat || (JWebglEnum.RenderbufferStorageInternalFormat = {}));
+    ;
+    /**
+     * 渲染缓冲区
+     */
+    let BindRenderbuffer;
+    (function (BindRenderbuffer) {
+        BindRenderbuffer[BindRenderbuffer["RENDERBUFFER"] = JWebglDefine.RENDERBUFFER] = "RENDERBUFFER";
+    })(BindRenderbuffer = JWebglEnum.BindRenderbuffer || (JWebglEnum.BindRenderbuffer = {}));
+    ;
+    /**
+     * 透明度混合
+     */
+    let BlendFunc;
+    (function (BlendFunc) {
+        BlendFunc[BlendFunc["ZERO"] = JWebglDefine.ZERO] = "ZERO";
+        BlendFunc[BlendFunc["ONE"] = JWebglDefine.ONE] = "ONE";
+        BlendFunc[BlendFunc["SRC_COLOR"] = JWebglDefine.SRC_COLOR] = "SRC_COLOR";
+        BlendFunc[BlendFunc["ONE_MINUS_SRC_COLOR"] = JWebglDefine.ONE_MINUS_SRC_COLOR] = "ONE_MINUS_SRC_COLOR";
+        BlendFunc[BlendFunc["SRC_ALPHA"] = JWebglDefine.SRC_ALPHA] = "SRC_ALPHA";
+        BlendFunc[BlendFunc["ONE_MINUS_SRC_ALPHA"] = JWebglDefine.ONE_MINUS_SRC_ALPHA] = "ONE_MINUS_SRC_ALPHA";
+        BlendFunc[BlendFunc["DST_ALPHA"] = JWebglDefine.DST_ALPHA] = "DST_ALPHA";
+        BlendFunc[BlendFunc["ONE_MINUS_DST_ALPHA"] = JWebglDefine.ONE_MINUS_DST_ALPHA] = "ONE_MINUS_DST_ALPHA";
+        BlendFunc[BlendFunc["DST_COLOR"] = JWebglDefine.DST_COLOR] = "DST_COLOR";
+        BlendFunc[BlendFunc["ONE_MINUS_DST_COLOR"] = JWebglDefine.ONE_MINUS_DST_COLOR] = "ONE_MINUS_DST_COLOR";
+        BlendFunc[BlendFunc["SRC_ALPHA_SATURATE"] = JWebglDefine.SRC_ALPHA_SATURATE] = "SRC_ALPHA_SATURATE";
+    })(BlendFunc = JWebglEnum.BlendFunc || (JWebglEnum.BlendFunc = {}));
+    ;
+    /**
+     * 开启程序功能
+     */
+    let EnableCap;
+    (function (EnableCap) {
+        EnableCap[EnableCap["DEPTH_TEST"] = JWebglDefine.DEPTH_TEST] = "DEPTH_TEST";
+        EnableCap[EnableCap["BLEND"] = JWebglDefine.BLEND] = "BLEND";
+        EnableCap[EnableCap["POLYGON_OFFSET_FILL"] = JWebglDefine.POLYGON_OFFSET_FILL] = "POLYGON_OFFSET_FILL";
+    })(EnableCap = JWebglEnum.EnableCap || (JWebglEnum.EnableCap = {}));
+    ;
     /**
      * 格式
      */
     let TexImage2DFormat;
     (function (TexImage2DFormat) {
         TexImage2DFormat[TexImage2DFormat["RGB"] = JWebglDefine.RGB] = "RGB";
+        TexImage2DFormat[TexImage2DFormat["RGBA"] = JWebglDefine.RGBA] = "RGBA";
+        TexImage2DFormat[TexImage2DFormat["ALPHA"] = JWebglDefine.ALPHA] = "ALPHA";
+        TexImage2DFormat[TexImage2DFormat["LUMINANCE"] = JWebglDefine.LUMINANCE] = "LUMINANCE";
+        TexImage2DFormat[TexImage2DFormat["LUMINANCE_ALPHA"] = JWebglDefine.LUMINANCE_ALPHA] = "LUMINANCE_ALPHA";
     })(TexImage2DFormat = JWebglEnum.TexImage2DFormat || (JWebglEnum.TexImage2DFormat = {}));
     ;
     /**
@@ -19,6 +91,10 @@ var JWebglEnum;
     let TexParameteriParam;
     (function (TexParameteriParam) {
         TexParameteriParam[TexParameteriParam["LINEAR"] = JWebglDefine.LINEAR] = "LINEAR";
+        TexParameteriParam[TexParameteriParam["NEAREST"] = JWebglDefine.NEAREST] = "NEAREST";
+        TexParameteriParam[TexParameteriParam["REPEAT"] = JWebglDefine.REPEAT] = "REPEAT";
+        TexParameteriParam[TexParameteriParam["MIRRORED_REPEAT"] = JWebglDefine.MIRRORED_REPEAT] = "MIRRORED_REPEAT";
+        TexParameteriParam[TexParameteriParam["CLAMP_TO_EDGE"] = JWebglDefine.CLAMP_TO_EDGE] = "CLAMP_TO_EDGE";
     })(TexParameteriParam = JWebglEnum.TexParameteriParam || (JWebglEnum.TexParameteriParam = {}));
     ;
     /**
@@ -27,6 +103,9 @@ var JWebglEnum;
     let TexParameteriPName;
     (function (TexParameteriPName) {
         TexParameteriPName[TexParameteriPName["TEXTURE_MIN_FILTER"] = JWebglDefine.TEXTURE_MIN_FILTER] = "TEXTURE_MIN_FILTER";
+        TexParameteriPName[TexParameteriPName["TEXTURE_MAG_FILTER"] = JWebglDefine.TEXTURE_MAG_FILTER] = "TEXTURE_MAG_FILTER";
+        TexParameteriPName[TexParameteriPName["TEXTURE_WRAP_S"] = JWebglDefine.TEXTURE_WRAP_S] = "TEXTURE_WRAP_S";
+        TexParameteriPName[TexParameteriPName["TEXTURE_WRAP_T"] = JWebglDefine.TEXTURE_WRAP_T] = "TEXTURE_WRAP_T";
     })(TexParameteriPName = JWebglEnum.TexParameteriPName || (JWebglEnum.TexParameteriPName = {}));
     ;
     /**
@@ -35,6 +114,7 @@ var JWebglEnum;
     let BindTexture;
     (function (BindTexture) {
         BindTexture[BindTexture["TEXTURE_2D"] = JWebglDefine.TEXTURE_2D] = "TEXTURE_2D";
+        BindTexture[BindTexture["TEXTURE_CUBE_MAP"] = JWebglDefine.TEXTURE_CUBE_MAP] = "TEXTURE_CUBE_MAP";
     })(BindTexture = JWebglEnum.BindTexture || (JWebglEnum.BindTexture = {}));
     ;
     /**
@@ -51,6 +131,7 @@ var JWebglEnum;
     let PixelStoreIPName;
     (function (PixelStoreIPName) {
         PixelStoreIPName[PixelStoreIPName["UNPACK_FLIP_Y_WEBGL"] = JWebglDefine.UNPACK_FLIP_Y_WEBGL] = "UNPACK_FLIP_Y_WEBGL";
+        PixelStoreIPName[PixelStoreIPName["UNPACK_PREMULTIPLY_ALPHA_WEBGL"] = JWebglDefine.UNPACK_PREMULTIPLY_ALPHA_WEBGL] = "UNPACK_PREMULTIPLY_ALPHA_WEBGL";
     })(PixelStoreIPName = JWebglEnum.PixelStoreIPName || (JWebglEnum.PixelStoreIPName = {}));
     /**
      * 数据类型
@@ -64,6 +145,9 @@ var JWebglEnum;
         VertexAttriPointerType[VertexAttriPointerType["INT"] = JWebglDefine.INT] = "INT";
         VertexAttriPointerType[VertexAttriPointerType["UNSIGNED_INT"] = JWebglDefine.UNSIGNED_INT] = "UNSIGNED_INT";
         VertexAttriPointerType[VertexAttriPointerType["FLOAT"] = JWebglDefine.FLOAT] = "FLOAT";
+        VertexAttriPointerType[VertexAttriPointerType["UNSIGNED_SHORT_5_6_5"] = JWebglDefine.UNSIGNED_SHORT_5_6_5] = "UNSIGNED_SHORT_5_6_5";
+        VertexAttriPointerType[VertexAttriPointerType["UNSIGNED_SHORT_4_4_4_4"] = JWebglDefine.UNSIGNED_SHORT_4_4_4_4] = "UNSIGNED_SHORT_4_4_4_4";
+        VertexAttriPointerType[VertexAttriPointerType["UNSIGNED_SHORT_5_5_5_1"] = JWebglDefine.UNSIGNED_SHORT_5_5_5_1] = "UNSIGNED_SHORT_5_5_5_1";
     })(VertexAttriPointerType = JWebglEnum.VertexAttriPointerType || (JWebglEnum.VertexAttriPointerType = {}));
     ;
     /**

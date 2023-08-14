@@ -5,21 +5,21 @@ import MgrDataItem from "./mgr_data/MgrDataItem.js";
 import IndexGlobal from "./IndexGlobal.js";
 import JWebgl from "./common/JWebgl.js";
 import JWebglDemoInstance from "./common/JWebglDemoInstance.js";
-import P16Clear from "./demo/P16Clear.js";
-import P24Point from "./demo/P24Point.js";
-import P39Point from "./demo/P39Point.js";
-import P47ClickPoint from "./demo/P47ClickPoint.js";
-import P56Colored from "./demo/P56Colored.js";
-import P66MultiPoint from "./demo/P66MultiPoint.js";
-import P80Triangle from "./demo/P80Triangle.js";
-import P88Translate from "./demo/P88Translate.js";
-import P94Rotate from "./demo/P94Rotate.js";
-import P102Matrix from "./demo/P102Matrix.js";
-import P115Matrix from "./demo/P115Matrix.js";
-import P120Animate from "./demo/P120Animate.js";
-import P133MultiPoint from "./demo/P133MultiPoint.js";
-import P136MultiPoint from "./demo/P136MultiPoint.js";
-import P141Varying from "./demo/P141Varying.js";
+import P16HelloCanvas from "./demo/P16HelloCanvas.js";
+import P24HelloPoint1 from "./demo/P24HelloPoint1.js";
+import P39HelloPoint2 from "./demo/P39HelloPoint2.js";
+import P47ClickedPoints from "./demo/P47ClickedPoints.js";
+import P56ColoredPoints from "./demo/P56ColoredPoints.js";
+import P66MultiPoints from "./demo/P66MultiPoints.js";
+import P80HelloTriangle from "./demo/P80HelloTriangle.js";
+import P88TranslatedTriangle from "./demo/P88TranslatedTriangle.js";
+import P94RotatedTriangle from "./demo/P94RotatedTriangle.js";
+import P102RotatedTriangle_Matrix from "./demo/P102RotatedTriangle_Matrix.js";
+import P115RotatedTranslatedTriangle from "./demo/P115RotatedTranslatedTriangle.js";
+import P120RotatingTriangles from "./demo/P120RotatingTriangles.js";
+import P133MultiAttributeSize from "./demo/P133MultiAttributeSize.js";
+import P136MultiAttributeSize_Interleaved from "./demo/P136MultiAttributeSize_Interleaved.js";
+import P141MultiAttributeColor from "./demo/P141MultiAttributeColor.js";
 
 Promise.resolve ()
     // 初始化案例

@@ -57,7 +57,7 @@ export default class P157Texture extends JWebglDemoInstance {
         return `P157Texture`;
     }
     onDraw() {
-        this.program.u_Sampler.fill(`./resources/sky.jpg`, 0);
+        this.program.u_Sampler.fill(`./resources/sky.jpg`);
         this.program.drawArrays(JWebglEnum.DrawArraysMode.TRIANGLE_STRIP, this.vertices);
     }
 }

@@ -23,14 +23,24 @@ class JWebglProgram {
         /**
          * 顶点着色器头部定义
          */
-        this._listVertexHead = new Array();
+        this._listVertexHead = new Array(`precision mediump float;`);
         /**
          * 片元着色器头部定义
          */
         this._listFragmentHead = new Array(`precision mediump float;`);
+        /**
+         * 纹理索引
+         */
+        this.textureIdx = 0;
         this.relWebgl = args.webgl;
-        this.buffer = this.relWebgl.ctx.createBuffer();
-        if (!this.buffer) {
+        this.attributeBuffer = this.relWebgl.ctx.createBuffer();
+        if (!this.attributeBuffer) {
+            this.relWebgl.error(`创建 buffer 失败`);
+            return;
+        }
+        ;
+        this.elementBuffer = this.relWebgl.ctx.createBuffer();
+        if (!this.elementBuffer) {
             this.relWebgl.error(`创建 buffer 失败`);
             return;
         }
@@ -149,7 +159,7 @@ class JWebglProgram {
      * @param data
      */
     fillAttByBuffer(data) {
-        this.relWebgl.ctx.bindBuffer(JWebglEnum.BindBufferTarget.ARRAY_BUFFER, this.buffer);
+        this.relWebgl.ctx.bindBuffer(JWebglEnum.BindBufferTarget.ARRAY_BUFFER, this.attributeBuffer);
         this.relWebgl.ctx.bufferData(JWebglEnum.BindBufferTarget.ARRAY_BUFFER, data, JWebglEnum.BufferDataUsage.STATIC_DRAW);
         for (let i = 0; i < this._listAtt.length; i++) {
             let att = this._listAtt[i];
@@ -165,7 +175,20 @@ class JWebglProgram {
      */
     drawArrays(mode, data) {
         this.fillAttByBuffer(data);
-        this.relWebgl.drawArrays(this, mode, 0, data.length / this.attTotalSize);
+        this.relWebgl.ctx.useProgram(this.program);
+        this.relWebgl.ctx.drawArrays(mode, 0, data.length / this.attTotalSize);
+    }
+    /**
+     * 绘制元素
+     * @param mode
+     * @param vertices
+     * @param indices
+     */
+    drawElements(mode, indices) {
+        this.relWebgl.ctx.bindBuffer(JWebglEnum.BindBufferTarget.ELEMENT_ARRAY_BUFFER, this.elementBuffer);
+        this.relWebgl.ctx.bufferData(JWebglEnum.BindBufferTarget.ELEMENT_ARRAY_BUFFER, indices, JWebglEnum.BufferDataUsage.STATIC_DRAW);
+        this.relWebgl.ctx.useProgram(this.program);
+        this.relWebgl.ctx.drawElements(mode, indices.length, JWebglEnum.VertexAttriPointerType.UNSIGNED_BYTE, 0);
     }
 }
 (function (JWebglProgram) {

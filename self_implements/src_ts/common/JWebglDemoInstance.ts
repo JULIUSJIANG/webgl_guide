@@ -121,6 +121,14 @@ abstract class JWebglDemoInstance {
     onTouchEnd () {
 
     }
+
+    /**
+     * 按下按钮
+     * @param key 
+     */
+    onKeyDown (key: string) {
+
+    }
 }
 
 namespace JWebglDemoInstance {
