@@ -1,7 +1,7 @@
 {
   "name": "electron",
   "version": "1.0.0",
-  "description": "圆角矩形生成器",
+  "description": "《WebGL编程指南》知识案例",
   "main": "src_js/IndexMain.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
