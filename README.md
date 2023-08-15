@@ -3,6 +3,7 @@
 ## 工程说明
 
 该工程代码主要参考《WebGL编程指南》配套的案例（standard_examples 目录）再以自己的方式实现其效果，与书本中的代码不一样的地方是，通过装饰器与策略模式，隐藏了许多关于缓冲区的细节，使得代码更为短小精悍，h5 版本的体验地址：https://juliusjiang.github.io/webgl_guide/h5_preview/build/
+
 ![image](https://github.com/JULIUSJIANG/webgl_guide/assets/33363444/b18c2ba9-933d-4442-8b35-dd2a02bf56b5)
 
 ## 目录说明
