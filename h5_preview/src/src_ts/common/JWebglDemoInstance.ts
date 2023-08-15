@@ -71,6 +71,10 @@ abstract class JWebglDemoInstance {
             let program = this.createProgram (programClass);
             this [propsName] = program;
         });
+        for (let i = 0; i < this._listProgram.length; i++) {
+            let listProgramI = this._listProgram [i];
+            listProgramI.ReProps ();
+        };
         this.onInit ();
     }
     /**

@@ -99,7 +99,6 @@ abstract class JWebglProgram {
             let define = `attribute ${attribute.onGetDefine()} ${attribute};`;
             this._listVertexHead.push (define);
             this.attTotalSize += attribute.onGetSize ();
-            console.log (`A this`, this);
         });
         symbolCache.mapKeyNameToUniformClass.forEach ((attClass, propsName) => {
             let uniform: JWebglProgramUniform = new (attClass as any) ({
@@ -157,8 +156,28 @@ abstract class JWebglProgram {
         };
     }
 
+    /**
+     * 属性缓存
+     */
+    _propsCache = {};
+
+    /**
+     * 设置属性缓存
+     * @param propsKey 
+     * @param propsVal 
+     */
     Set (propsKey: string, propsVal: any) {
         this [propsKey] = propsVal;
+        this._propsCache [propsKey] = propsVal;
+    }
+
+    /**
+     * 回填属性
+     */
+    ReProps () {
+        for (let key in this._propsCache) {
+            this [key] = this._propsCache [key];
+        };
     }
 
     /**
