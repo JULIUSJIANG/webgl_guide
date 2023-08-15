@@ -48,6 +48,10 @@ export default class P249PerspectiveView extends JWebglDemoInstance {
         return `P249PerspectiveView`;
     }
 
+    onGetInfo() {
+        return `引入透视投影`;
+    }
+
     /**
      * 着色程序
      */

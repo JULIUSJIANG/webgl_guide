@@ -44,6 +44,10 @@ export default class P228LookAtRotatedTriangles_mvMatrix extends JWebglDemoInsta
         return `P228LookAtRotatedTriangles_mvMatrix`;
     }
 
+    onGetInfo () {
+        return `把模型矩阵、视图矩阵合并为 “模型视图矩阵”`;
+    }
+
     /**
      * 着色程序
      */

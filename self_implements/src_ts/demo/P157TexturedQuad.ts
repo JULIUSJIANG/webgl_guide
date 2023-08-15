@@ -44,6 +44,10 @@ export default class P157TexturedQuad extends JWebglDemoInstance {
         return `P157TexturedQuad`;
     }
 
+    onGetInfo () {
+        return `加载纹理并且展示出来`;
+    }
+
     /**
      * 着色程序
      */

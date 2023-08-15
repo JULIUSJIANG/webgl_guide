@@ -40,6 +40,9 @@ export default class P47ClickedPoints extends JWebglDemoInstance {
     getName() {
         return `P47ClickedPoints`;
     }
+    onGetInfo() {
+        return `用鼠标点击 canvas，点击的位置会出现点`;
+    }
     onDraw() {
         for (let i = 0; i < this._listPoints.length; i += 2) {
             let x = this._listPoints[i + 0];

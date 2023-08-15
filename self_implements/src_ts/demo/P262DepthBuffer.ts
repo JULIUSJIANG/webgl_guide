@@ -44,6 +44,10 @@ export default class P262DepthBuffer extends JWebglDemoInstance {
         return `P262DepthBuffer`;
     }
 
+    onGetInfo () {
+        return `开启深度测试，解决遮挡问题`;
+    }
+
     /**
      * 着色程序
      */

@@ -42,6 +42,9 @@ export default class P80HelloTriangle extends JWebglDemoInstance {
     getName() {
         return `P80HelloTriangle`;
     }
+    onGetInfo() {
+        return `绘制出一个三角形`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.TRIANGLES, 0, this.vertices.length / this.program.a_Position.onGetSize());

@@ -40,8 +40,12 @@ void main() {
 
 export default class P371BlendedCube extends JWebglDemoInstance {
 
-    getName() {
+    getName () {
         return `P371BlendedCube`;
+    }
+
+    onGetInfo () {
+        return `绘制出透明的立方体`;
     }
 
     /**

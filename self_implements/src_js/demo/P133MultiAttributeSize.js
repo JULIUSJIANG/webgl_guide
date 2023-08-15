@@ -53,6 +53,9 @@ export default class P133MultiAttributeSize extends JWebglDemoInstance {
     getName() {
         return `P133MultiAttributeSize`;
     }
+    onGetInfo() {
+        return `通过 attribute 设定点的尺寸`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.program.a_PointSize.fillByBuffer(this.sizes);

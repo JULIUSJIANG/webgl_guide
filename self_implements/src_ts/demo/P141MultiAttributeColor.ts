@@ -43,6 +43,10 @@ export default class P141MultiAttributeColor extends JWebglDemoInstance {
         return `P141MultiAttributeColor`;
     }
 
+    onGetInfo () {
+        return `把点的位置信息、颜色信息存储在同一个 Float32Array 里面`;
+    }
+
     /**
      * 着色程序
      */

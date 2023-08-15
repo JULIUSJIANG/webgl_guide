@@ -40,8 +40,12 @@ void main() {
 
 export default class P265Zfighting extends JWebglDemoInstance {
 
-    getName() {
+    getName () {
         return `P265Zfighting`;
+    }
+
+    onGetInfo () {
+        return `通过 polygonOffset 解决同深度冲突的问题`;
     }
 
     /**

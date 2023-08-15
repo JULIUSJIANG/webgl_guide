@@ -81,6 +81,9 @@ export default class P249PerspectiveView extends JWebglDemoInstance {
     getName() {
         return `P249PerspectiveView`;
     }
+    onGetInfo() {
+        return `引入透视投影`;
+    }
     onDraw() {
         this.program.u_ViewMatrix.fillByMat4(this.viewMat4);
         this.program.u_ProjMatrix.fillByMat4(this.pMat4);

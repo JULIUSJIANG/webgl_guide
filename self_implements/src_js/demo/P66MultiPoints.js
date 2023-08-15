@@ -43,6 +43,9 @@ export default class P66MultiPoints extends JWebglDemoInstance {
     getName() {
         return `P66MultiPoints`;
     }
+    onGetInfo() {
+        return `使用 buffer 一次设定多个点的位置`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, this.vertices.length / this.program.a_Position.onGetSize());

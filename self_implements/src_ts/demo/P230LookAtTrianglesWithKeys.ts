@@ -45,6 +45,10 @@ export default class P230LookAtTrianglesWithKeys extends JWebglDemoInstance {
         return `P230LookAtTrianglesWithKeys`;
     }
 
+    onGetInfo () {
+        return `按下键盘左箭头、右箭头以调整视点位置`;
+    }
+
     /**
      * 着色程序
      */

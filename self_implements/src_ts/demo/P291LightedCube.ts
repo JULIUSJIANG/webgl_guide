@@ -58,6 +58,10 @@ export default class P291LightedCube extends JWebglDemoInstance {
         return `P291LightedCube`;
     }
 
+    onGetInfo () {
+        return `给立方体加入平行光效果`;
+    }
+
     /**
      * 着色程序
      */

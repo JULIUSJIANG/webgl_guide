@@ -50,6 +50,10 @@ export default class P383FramebufferObject extends JWebglDemoInstance {
         return `P383FramebufferObject`;
     }
 
+    onGetInfo () {
+        return `使用帧缓冲区实现离屏绘制`;
+    }
+
     /**
      * 着色程序
      */

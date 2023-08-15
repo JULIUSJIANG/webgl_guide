@@ -37,6 +37,10 @@ export default class P88TranslatedTriangle extends JWebglDemoInstance {
         return `P88TranslatedTriangle`;
     }
 
+    onGetInfo () {
+        return `绘制出一个经过平移的三角形`;
+    }
+
     /**
      * 着色程序
      */

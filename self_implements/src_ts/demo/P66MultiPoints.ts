@@ -34,6 +34,10 @@ export default class P66MultiPoints extends JWebglDemoInstance {
         return `P66MultiPoints`;
     }
 
+    onGetInfo () {
+        return `使用 buffer 一次设定多个点的位置`;
+    }
+
     /**
      * 着色程序
      */

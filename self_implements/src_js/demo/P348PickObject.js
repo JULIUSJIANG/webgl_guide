@@ -111,6 +111,9 @@ export default class P348PickObject extends JWebglDemoInstance {
     getName() {
         return `P348PickObject`;
     }
+    onGetInfo() {
+        return `精确判断鼠标是否点击到立方体，成功点到的时候弹出提示`;
+    }
     onUpdate(dt) {
         dt = Math.min(dt, 16);
         this.angle += 20 * dt / 1000;

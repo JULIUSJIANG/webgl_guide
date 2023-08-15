@@ -49,6 +49,9 @@ export default class P366RoundedPoint extends JWebglDemoInstance {
     getName() {
         return `P366RoundedPoint`;
     }
+    onGetInfo() {
+        return `绘制出圆形点`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, this.vertices.length / this.program.a_Position.onGetSize());

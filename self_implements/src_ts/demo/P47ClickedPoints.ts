@@ -38,6 +38,10 @@ export default class P47ClickedPoints extends JWebglDemoInstance {
         return `P47ClickedPoints`;
     }
 
+    onGetInfo () {
+        return `用鼠标点击 canvas，点击的位置会出现点`;
+    }
+
     /**
      * 着色器程序
      */

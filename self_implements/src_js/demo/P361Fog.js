@@ -124,6 +124,9 @@ export default class P361Fog extends JWebglDemoInstance {
     getName() {
         return `P361Fog`;
     }
+    onGetInfo() {
+        return `实现雾气的效果`;
+    }
     onInit() {
         this.mvpMat4
             .setPerspective(30, 1, 1, 100)

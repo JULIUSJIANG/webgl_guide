@@ -67,6 +67,9 @@ export default class P265Zfighting extends JWebglDemoInstance {
     getName() {
         return `P265Zfighting`;
     }
+    onGetInfo() {
+        return `通过 polygonOffset 解决同深度冲突的问题`;
+    }
     onDraw() {
         this.program.u_MvpMatrix.fillByMat4(this.mvpMat4);
         this.program.drawArrays(JWebglEnum.DrawArraysMode.TRIANGLES, this.verticesA);

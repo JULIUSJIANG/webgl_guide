@@ -190,6 +190,9 @@ export default class P400Shadow_highp extends JWebglDemoInstance {
     getName() {
         return `P400Shadow_highp`;
     }
+    onGetInfo() {
+        return `阴影纹理充分使用 r、g、b、a 分量记录深度，以提升阴影计算的精度`;
+    }
     onInit() {
         let frameBuffer = this.relWebgl.ctx.createFramebuffer();
         this.frameBuffer = frameBuffer;

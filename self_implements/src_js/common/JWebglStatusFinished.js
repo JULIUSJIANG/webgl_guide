@@ -70,6 +70,6 @@ export default class JWebglStatusFinished extends JWebglStatus {
         this.relWebgl.currentDemo.inst.onDraw();
     }
     onGetInfo() {
-        return this.relWebgl.currentDemo.inst.onGetInfo();
+        return this.relWebgl.mapNameToDemo.get(MgrData.inst.get(MgrDataItem.CURRENT_DEMO)).inst.onGetInfo();
     }
 }

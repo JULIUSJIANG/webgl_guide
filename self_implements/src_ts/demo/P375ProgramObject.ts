@@ -104,6 +104,10 @@ export default class P375ProgramObject extends JWebglDemoInstance {
         return `P375ProgramObject`;
     }
 
+    onGetInfo () {
+        return `通过切换着色程序以让不同着色器效果同时展示`;
+    }
+
     @JWebglDemoInstance.program (ProgramA)
     programA: ProgramA;
 

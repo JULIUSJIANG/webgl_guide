@@ -42,6 +42,10 @@ export default class P56ColoredPoints extends JWebglDemoInstance {
         return `P56ColoredPoints`;
     }
 
+    onGetInfo () {
+        return `用鼠标点击 canvas，点击的位置会出现点，点的颜色与位置象限有关系`;
+    }
+
     /**
      * 着色程序
      */

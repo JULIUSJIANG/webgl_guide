@@ -37,6 +37,10 @@ export default class P39HelloPoint2 extends JWebglDemoInstance {
         return `P39HelloPoint2`;
     }
 
+    onGetInfo () {
+        return `通过 attribute 设置点的位置`;
+    }
+
     /**
      * 着色程序
      */

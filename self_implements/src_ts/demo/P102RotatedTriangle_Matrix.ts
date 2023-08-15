@@ -37,6 +37,10 @@ export default class P102RotatedTriangle_Matrix extends JWebglDemoInstance {
         return `P102RotatedTriangle_Matrix`;
     }
 
+    onGetInfo () {
+        return `通过矩阵实现三角形的旋转`;
+    }
+
     /**
      * 着色程序
      */

@@ -56,6 +56,9 @@ export default class P120RotatingTriangles extends JWebglDemoInstance {
     getName() {
         return `P120RotatingTriangles`;
     }
+    onGetInfo() {
+        return `通过逐帧刷新实现旋转动画`;
+    }
     onUpdate(dt) {
         this.angle += dt / 1000 * 45;
         MgrData.inst.dataVersion++;

@@ -77,6 +77,9 @@ export default class P369LookAtBlendedTriangles extends JWebglDemoInstance {
     getName() {
         return `P369LookAtBlendedTriangles`;
     }
+    onGetInfo() {
+        return `展示透明效果`;
+    }
     onKeyDown(key) {
         switch (key) {
             case `ArrowLeft`:

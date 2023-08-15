@@ -33,6 +33,10 @@ export default class P80HelloTriangle extends JWebglDemoInstance {
         return `P80HelloTriangle`;
     }
 
+    onGetInfo () {
+        return `绘制出一个三角形`;
+    }
+
     /**
      * 着色程序
      */

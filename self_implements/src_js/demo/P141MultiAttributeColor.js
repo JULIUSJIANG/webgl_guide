@@ -51,6 +51,9 @@ export default class P141MultiAttributeColor extends JWebglDemoInstance {
     getName() {
         return `P141MultiAttributeColor`;
     }
+    onGetInfo() {
+        return `把点的位置信息、颜色信息存储在同一个 Float32Array 里面`;
+    }
     onDraw() {
         this.program.drawArrays(JWebglEnum.DrawArraysMode.TRIANGLES, this.vertices);
     }

@@ -66,8 +66,12 @@ void main() {
 
 export default class P361Fog extends JWebglDemoInstance {
 
-    getName() {
+    getName () {
         return `P361Fog`;
+    }
+
+    onGetInfo () {
+        return `实现雾气的效果`;
     }
 
     /**

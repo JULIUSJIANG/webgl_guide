@@ -50,6 +50,9 @@ export default class P102RotatedTriangle_Matrix extends JWebglDemoInstance {
     getName() {
         return `P102RotatedTriangle_Matrix`;
     }
+    onGetInfo() {
+        return `通过矩阵实现三角形的旋转`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         let radian = Math.PI * this.angle / 180;

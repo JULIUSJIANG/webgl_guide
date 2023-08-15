@@ -51,6 +51,10 @@ export default class P344RotateObject extends JWebglDemoInstance {
         return `P344RotateObject`;
     }
 
+    onGetInfo () {
+        return `通过鼠标拖拽调整观察角度`;
+    }
+
     /**
      * 着色程序
      */

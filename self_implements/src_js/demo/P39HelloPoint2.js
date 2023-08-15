@@ -35,6 +35,9 @@ export default class P39HelloPoint2 extends JWebglDemoInstance {
     getName() {
         return `P39HelloPoint2`;
     }
+    onGetInfo() {
+        return `通过 attribute 设置点的位置`;
+    }
     onDraw() {
         this.program.a_Position.fillByVec4(0.5, 0.5, 0, 1);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, 1);

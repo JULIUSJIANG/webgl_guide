@@ -38,6 +38,10 @@ export default class P115RotatedTranslatedTriangle extends JWebglDemoInstance {
         return `P115RotatedTranslatedTriangle`;
     }
 
+    onGetInfo () {
+        return `使用矩阵库实现对三角形的先平移、后旋转的变换`;
+    }
+
     /**
      * 着色程序
      */

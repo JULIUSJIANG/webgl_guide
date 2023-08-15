@@ -133,6 +133,9 @@ export default class P352PickFace extends JWebglDemoInstance {
     getName() {
         return `P352PickFace`;
     }
+    onGetInfo() {
+        return `精确判断鼠标点到的立方体的面，并且更换为白色`;
+    }
     onUpdate(dt) {
         dt = Math.min(dt, 16);
         this.angle += 20 * dt / 1000;

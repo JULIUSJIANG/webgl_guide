@@ -49,6 +49,10 @@ export default class P178MultiTexture extends JWebglDemoInstance {
         return `P178MultiTexture`;
     }
 
+    onGetInfo () {
+        return `加载 2 张纹理并且在着色器中取样、混合`;
+    }
+
     /**
      * 着色程序
      */

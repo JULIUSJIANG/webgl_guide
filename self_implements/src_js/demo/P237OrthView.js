@@ -74,6 +74,10 @@ export default class P237OrthView extends JWebglDemoInstance {
     getName() {
         return `P237OrthView`;
     }
+    onGetInfo() {
+        return `引入正射投影，按下左箭头：近裁剪面增加，按下右箭头：近裁剪面减少，按下上箭头：远裁剪面增加，按下下箭头：远裁剪面减少
+`;
+    }
     onKeyDown(key) {
         switch (key) {
             case `ArrowLeft`:

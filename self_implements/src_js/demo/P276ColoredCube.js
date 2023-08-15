@@ -84,6 +84,9 @@ export default class P276ColoredCube extends JWebglDemoInstance {
     getName() {
         return `P276ColoredCube`;
     }
+    onGetInfo() {
+        return `让立方体各个面有自己独特的颜色`;
+    }
     onDraw() {
         this.program.u_MvpMatrix.fillByMat4(this.mvpMat4);
         this.program.a_Position.fillByBuffer(this.vertices);

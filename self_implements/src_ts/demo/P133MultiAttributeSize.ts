@@ -38,6 +38,10 @@ export default class P133MultiAttributeSize extends JWebglDemoInstance {
         return `P133MultiAttributeSize`;
     }
 
+    onGetInfo () {
+        return `通过 attribute 设定点的尺寸`;
+    }
+
     /**
      * 着色程序
      */

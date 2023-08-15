@@ -78,6 +78,10 @@ export default class P309PointLightedCube_perFragment extends JWebglDemoInstance
         return `P309PointLightedCube_perFragment`;
     }
 
+    onGetInfo () {
+        return `给立方体添加逐片元的点光源效果`;
+    }
+
     /**
      * 着色程序
      */

@@ -46,6 +46,9 @@ export default class P88TranslatedTriangle extends JWebglDemoInstance {
     getName() {
         return `P88TranslatedTriangle`;
     }
+    onGetInfo() {
+        return `绘制出一个经过平移的三角形`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         this.program.u_Translation.fill(0.2, 0.2, 0.2, 0);

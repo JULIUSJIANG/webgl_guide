@@ -84,6 +84,9 @@ export default class P371BlendedCube extends JWebglDemoInstance {
     getName() {
         return `P371BlendedCube`;
     }
+    onGetInfo() {
+        return `绘制出透明的立方体`;
+    }
     onEnable() {
         this.relWebgl.ctx.disable(JWebglEnum.EnableCap.DEPTH_TEST);
     }

@@ -35,6 +35,10 @@ export default class P24HelloPoint1 extends JWebglDemoInstance {
         return `P24HelloPoint1`;
     }
 
+    onGetInfo () {
+        return `在画面中绘制出一个点`;
+    }
+
     /**
      * 着色程序
      */

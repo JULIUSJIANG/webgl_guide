@@ -128,6 +128,9 @@ export default class P302LightedTranslatedRotatedCube extends JWebglDemoInstance
     getName() {
         return `P302LightedTranslatedRotatedCube`;
     }
+    onGetInfo() {
+        return `让立方体经过变换以后的法向量保持正确，从而光照效果正确`;
+    }
     onInit() {
         this.lightDirection.elements[0] = 0.5;
         this.lightDirection.elements[1] = 3;

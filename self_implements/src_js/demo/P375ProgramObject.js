@@ -170,6 +170,9 @@ export default class P375ProgramObject extends JWebglDemoInstance {
     getName() {
         return `P375ProgramObject`;
     }
+    onGetInfo() {
+        return `通过切换着色程序以让不同着色器效果同时展示`;
+    }
     onUpdate(dt) {
         this.currentAngle += dt / 1000 * 30;
         MgrData.inst.dataVersion++;

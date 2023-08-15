@@ -50,6 +50,10 @@ export default class P348PickObject extends JWebglDemoInstance {
         return `P348PickObject`;
     }
 
+    onGetInfo () {
+        return `精确判断鼠标是否点击到立方体，成功点到的时候弹出提示`;
+    }
+
     /**
      * 着色程序
      */

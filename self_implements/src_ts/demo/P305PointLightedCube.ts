@@ -70,6 +70,10 @@ export default class P305PointLightedCube extends JWebglDemoInstance {
         return `P305PointLightedCube`;
     }
 
+    onGetInfo () {
+        return `给立方体添加逐顶点的点光源效果`;
+    }
+
     /**
      * 着色程序
      */

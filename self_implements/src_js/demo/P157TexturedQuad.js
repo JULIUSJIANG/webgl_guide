@@ -56,6 +56,9 @@ export default class P157TexturedQuad extends JWebglDemoInstance {
     getName() {
         return `P157TexturedQuad`;
     }
+    onGetInfo() {
+        return `加载纹理并且展示出来`;
+    }
     onDraw() {
         this.program.u_Sampler.fillByUrl(`./resources/sky.jpg`);
         this.program.drawArrays(JWebglEnum.DrawArraysMode.TRIANGLE_STRIP, this.vertices);

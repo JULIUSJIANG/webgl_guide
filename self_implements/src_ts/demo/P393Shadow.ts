@@ -110,6 +110,10 @@ export default class P393Shadow extends JWebglDemoInstance {
         return `P393Shadow`;
     }
 
+    onGetInfo () {
+        return `使用帧缓冲区实现阴影效果`;
+    }
+
     /**
      * 着色程序 - 阴影
      */

@@ -78,6 +78,6 @@ export default class JWebglStatusFinished extends JWebglStatus {
     }
 
     onGetInfo (): string {
-        return this.relWebgl.currentDemo.inst.onGetInfo ();
+        return this.relWebgl.mapNameToDemo.get (MgrData.inst.get (MgrDataItem.CURRENT_DEMO)).inst.onGetInfo ();
     }
 }

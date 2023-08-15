@@ -158,6 +158,9 @@ export default class P327MultiJointModel_segment extends JWebglDemoInstance {
     getName() {
         return `P327MultiJointModel_segment`;
     }
+    onGetInfo() {
+        return `通过键盘上箭头、右箭头、下箭头、左箭头、z 键、x 键、c 键、v 键控制模型，模型的顶点数据拆分在不同的 Float32Array 里面`;
+    }
     onKeyDown(key) {
         switch (key) {
             case JWebglKey["ArrowUp"]:

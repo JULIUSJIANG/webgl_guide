@@ -79,6 +79,9 @@ export default class P254PerspectiveView_mvp extends JWebglDemoInstance {
     getName() {
         return `P254PerspectiveView_mvp`;
     }
+    onGetInfo() {
+        return `把模型矩阵、视图矩阵、投影矩阵复合为模型视图投影矩阵`;
+    }
     onDraw() {
         this.program.u_ViewMatrix.fillByMat4(this.vMat4);
         this.program.u_ProjMatrix.fillByMat4(this.pMat4);

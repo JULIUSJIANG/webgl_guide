@@ -48,6 +48,10 @@ export default class P369LookAtBlendedTriangles extends JWebglDemoInstance {
         return `P369LookAtBlendedTriangles`;
     }
 
+    onGetInfo () {
+        return `展示透明效果`;
+    }
+
     /**
      * 着色程序
      */

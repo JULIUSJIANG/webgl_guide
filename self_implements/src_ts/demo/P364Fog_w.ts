@@ -70,6 +70,10 @@ export default class P364Fog_w extends JWebglDemoInstance {
         return `P364Fog_w`;
     }
 
+    onGetInfo () {
+        return `使用 w 分量替代视点到片元的距离以实现雾气效果`;
+    }
+
     /**
      * 着色程序
      */

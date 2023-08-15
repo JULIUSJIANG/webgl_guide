@@ -40,8 +40,12 @@ void main() {
 
 export default class P269HelloCubes extends JWebglDemoInstance {
 
-    getName() {
+    getName () {
         return `P269HelloCubes`;
+    }
+
+    onGetInfo () {
+        return `绘制颜色丰富的立方体`;
     }
 
     /**

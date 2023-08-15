@@ -10,6 +10,10 @@ export default class P16HelloCanvas extends JWebglDemoInstance {
         return `P16HelloCanvas`;
     }
 
+    onGetInfo () {
+        return `展示一个纯色的 canvas`;
+    }
+
     onDraw (): void {
         // 设置背景颜色
         this.relWebgl.ctx.clearColor (1, 0, 0, 1);

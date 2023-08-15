@@ -77,6 +77,9 @@ export default class P262DepthBuffer extends JWebglDemoInstance {
     getName() {
         return `P262DepthBuffer`;
     }
+    onGetInfo() {
+        return `开启深度测试，解决遮挡问题`;
+    }
     onDraw() {
         this.modelMat4.setTranslate(0.75, 0, 0);
         this.mvpMat4.set(this.projMat4).multiply(this.viewMat4).multiply(this.modelMat4);

@@ -65,6 +65,9 @@ export default class P221LookAtTriangles extends JWebglDemoInstance {
     getName() {
         return `P221LookAtTriangles`;
     }
+    onGetInfo() {
+        return `同时绘制多个三角形，设定视点以及观察位置`;
+    }
     onEnable() {
         this.relWebgl.ctx.disable(JWebglEnum.EnableCap.DEPTH_TEST);
     }

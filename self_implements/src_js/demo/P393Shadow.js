@@ -181,6 +181,9 @@ export default class P393Shadow extends JWebglDemoInstance {
     getName() {
         return `P393Shadow`;
     }
+    onGetInfo() {
+        return `使用帧缓冲区实现阴影效果`;
+    }
     onInit() {
         let frameBuffer = this.relWebgl.ctx.createFramebuffer();
         this.frameBuffer = frameBuffer;

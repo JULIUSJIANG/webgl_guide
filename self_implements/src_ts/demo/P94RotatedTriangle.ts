@@ -42,6 +42,10 @@ export default class P94RotatedTriangle extends JWebglDemoInstance {
         return `P94RotatedTriangle`;
     }
 
+    onGetInfo () {
+        return `绘制出一个经过旋转的三角形`
+    }
+
     /**
      * 着色程序
      */

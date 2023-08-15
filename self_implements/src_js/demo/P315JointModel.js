@@ -119,6 +119,9 @@ export default class P315JointModel extends JWebglDemoInstance {
     getName() {
         return `P315JointModel`;
     }
+    onGetInfo() {
+        return `通过键盘上、右、下、左箭头控制模型`;
+    }
     onKeyDown(key) {
         switch (key) {
             case JWebglKey["ArrowUp"]:

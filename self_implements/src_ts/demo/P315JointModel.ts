@@ -55,6 +55,10 @@ export default class P315JointModel extends JWebglDemoInstance {
         return `P315JointModel`;
     }
 
+    onGetInfo () {
+        return `通过键盘上、右、下、左箭头控制模型`;
+    }
+
     /**
      * 着色程序
      */

@@ -44,6 +44,10 @@ export default class P276ColoredCube extends JWebglDemoInstance {
         return `P276ColoredCube`;
     }
 
+    onGetInfo () {
+        return `让立方体各个面有自己独特的颜色`;
+    }
+
     /**
      * 着色程序
      */

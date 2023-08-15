@@ -75,6 +75,9 @@ export default class P269HelloCubes extends JWebglDemoInstance {
     getName() {
         return `P269HelloCubes`;
     }
+    onGetInfo() {
+        return `绘制颜色丰富的立方体`;
+    }
     onDraw() {
         this.program.u_MvpMatrix.fillByMat4(this.mvpMat4);
         this.program.fillAttByBuffer(this.vertices);

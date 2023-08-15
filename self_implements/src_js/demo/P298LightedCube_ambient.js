@@ -117,6 +117,9 @@ export default class P298LightedCube_ambient extends JWebglDemoInstance {
     getName() {
         return `P298LightedCube_ambient`;
     }
+    onGetInfo() {
+        return `给立方体加入平行光效果以及环境光效果`;
+    }
     onInit() {
         this.lightDirection.elements[0] = 0.5;
         this.lightDirection.elements[1] = 3;

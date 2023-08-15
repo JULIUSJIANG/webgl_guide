@@ -77,6 +77,9 @@ export default class P244LookAtTrianglesWithKeys_ViewVolume extends JWebglDemoIn
     getName() {
         return `P244LookAtTrianglesWithKeys_ViewVolume`;
     }
+    onGetInfo() {
+        return `按下键盘左箭头、右箭头以调整视点位置，且画面中三角形在短距离调整内不被裁切`;
+    }
     onKeyDown(key) {
         switch (key) {
             case `ArrowLeft`:

@@ -38,6 +38,10 @@ export default class P136MultiAttributeSize_Interleaved extends JWebglDemoInstan
         return `P136MultiAttributeSize_Interleaved`;
     }
 
+    onGetInfo () {
+        return `把点的位置信息、尺寸信息存储在同一个 Float32Array 里面`;
+    }
+
     /**
      * 着色程序
      */

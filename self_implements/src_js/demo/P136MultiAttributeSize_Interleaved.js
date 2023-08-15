@@ -47,6 +47,9 @@ export default class P136MultiAttributeSize_Interleaved extends JWebglDemoInstan
     getName() {
         return `P136MultiAttributeSize_Interleaved`;
     }
+    onGetInfo() {
+        return `把点的位置信息、尺寸信息存储在同一个 Float32Array 里面`;
+    }
     onDraw() {
         this.program.fillAttByBuffer(this.vertices);
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, this.vertices.length / this.program.attTotalSize);

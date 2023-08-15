@@ -56,6 +56,9 @@ export default class P94RotatedTriangle extends JWebglDemoInstance {
     getName() {
         return `P94RotatedTriangle`;
     }
+    onGetInfo() {
+        return `绘制出一个经过旋转的三角形`;
+    }
     onDraw() {
         this.program.a_Position.fillByBuffer(this.vertices);
         let radian = Math.PI * this.angle / 180;

@@ -47,6 +47,10 @@ export default class P227LookAtRotatedTriangles extends JWebglDemoInstance {
         return `P227LookAtRotatedTriangles`;
     }
 
+    onGetInfo () {
+        return `同时绘制多个三角形，设定视点以及观察位置，再旋转三角形`;
+    }
+
     /**
      * 着色程序
      */

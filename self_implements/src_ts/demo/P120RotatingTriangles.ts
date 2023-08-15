@@ -40,6 +40,10 @@ export default class P120RotatingTriangles extends JWebglDemoInstance {
         return `P120RotatingTriangles`;
     }
 
+    onGetInfo () {
+        return `通过逐帧刷新实现旋转动画`;
+    }
+
     /**
      * 着色程序
      */

@@ -40,6 +40,10 @@ export default class P366RoundedPoint extends JWebglDemoInstance {
         return `P366RoundedPoint`;
     }
 
+    onGetInfo () {
+      return `绘制出圆形点`;
+    }
+
     /**
      * 着色程序
      */

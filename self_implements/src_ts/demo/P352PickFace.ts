@@ -60,6 +60,10 @@ export default class P352PickFace extends JWebglDemoInstance {
         return `P352PickFace`;
     }
 
+    onGetInfo () {
+        return `精确判断鼠标点到的立方体的面，并且更换为白色`;
+    }
+
     /**
      * 着色程序
      */

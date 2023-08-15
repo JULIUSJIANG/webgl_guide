@@ -34,6 +34,9 @@ export default class P24HelloPoint1 extends JWebglDemoInstance {
     getName() {
         return `P24HelloPoint1`;
     }
+    onGetInfo() {
+        return `在画面中绘制出一个点`;
+    }
     onDraw() {
         this.relWebgl.drawArrays(this.program, JWebglEnum.DrawArraysMode.POINTS, 0, 1);
     }
