@@ -76,6 +76,14 @@ export default class P221LookAtTriangles extends JWebglDemoInstance {
         0, 1, 0
     );
 
+    onEnable (): void {
+        this.relWebgl.ctx.disable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
+    onDisable (): void {
+        this.relWebgl.ctx.enable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
     onDraw (): void {
         this.program.u_ViewMatrix.fillByMat4 (this.viewMat4);
         this.program.drawArrays (JWebglEnum.DrawArraysMode.TRIANGLES, this.vertices);

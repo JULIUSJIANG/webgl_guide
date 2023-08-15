@@ -90,6 +90,14 @@ export default class P228LookAtRotatedTriangles_mvMatrix extends JWebglDemoInsta
         this.mvMat4 = this.viewMat4.multiply (this.modelMat4);
     }
 
+    onEnable (): void {
+        this.relWebgl.ctx.disable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
+    onDisable (): void {
+        this.relWebgl.ctx.enable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
     onDraw (): void {
         this.program.u_ModelViewMatrix.fillByMat4 (this.mvMat4);
         this.program.drawArrays (JWebglEnum.DrawArraysMode.TRIANGLES, this.vertices);

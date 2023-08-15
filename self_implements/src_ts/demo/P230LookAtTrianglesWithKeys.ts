@@ -92,6 +92,14 @@ export default class P230LookAtTrianglesWithKeys extends JWebglDemoInstance {
         MgrData.inst.dataVersion++;
     }
 
+    onEnable (): void {
+        this.relWebgl.ctx.disable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
+    onDisable (): void {
+        this.relWebgl.ctx.enable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
     onDraw (): void {
         this.viewMat4.setLookAt (
             this.x, 0.25, 0.25,

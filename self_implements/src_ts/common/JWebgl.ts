@@ -55,6 +55,7 @@ import P371BlendedCube from "../demo/P371BlendedCube.js";
 import P375ProgramObject from "../demo/P375ProgramObject.js";
 import P383FramebufferObject from "../demo/P383FramebufferObject.js";
 import P393Shadow from "../demo/P393Shadow.js";
+import P400Shadow_highp from "../demo/P400Shadow_highp.js";
 
 /**
  * 示例的执行环境
@@ -149,7 +150,8 @@ class JWebgl {
             P371BlendedCube,
             P375ProgramObject,
             P383FramebufferObject,
-            P393Shadow
+            P393Shadow,
+            P400Shadow_highp
         ];
         for (let i = 0; i < listDemo.length; i++) {
             let listDemoI = listDemo [i];

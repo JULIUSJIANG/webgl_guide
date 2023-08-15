@@ -84,6 +84,14 @@ export default class P227LookAtRotatedTriangles extends JWebglDemoInstance {
      */
     modelMat4 = (new JWebglMatrix4 ()).setRotate (-10, 0, 0, 1);
 
+    onEnable (): void {
+        this.relWebgl.ctx.disable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+
+    onDisable (): void {
+        this.relWebgl.ctx.enable (JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+    
     onDraw (): void {
         this.program.u_ViewMatrix.fillByMat4 (this.viewMat4);
         this.program.u_ModelMatrix.fillByMat4 (this.modelMat4);

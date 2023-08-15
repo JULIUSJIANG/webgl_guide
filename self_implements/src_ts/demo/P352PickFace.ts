@@ -177,6 +177,14 @@ export default class P352PickFace extends JWebglDemoInstance {
         this.draw ();
     }
 
+    onEnable (): void {
+        this.relWebgl.ctx.disable (JWebglEnum.EnableCap.BLEND);
+    }
+
+    onDisable (): void {
+        this.relWebgl.ctx.enable (JWebglEnum.EnableCap.BLEND);
+    }
+
     draw () {
         this.relWebgl.ctx.clear (JWebglEnum.ClearMask.COLOR_BUFFER_BIT);
         this.relWebgl.ctx.clear (JWebglEnum.ClearMask.DEPTH_BUFFER_BIT);

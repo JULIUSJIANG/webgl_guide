@@ -72,6 +72,12 @@ export default class P227LookAtRotatedTriangles extends JWebglDemoInstance {
     getName() {
         return `P227LookAtRotatedTriangles`;
     }
+    onEnable() {
+        this.relWebgl.ctx.disable(JWebglEnum.EnableCap.DEPTH_TEST);
+    }
+    onDisable() {
+        this.relWebgl.ctx.enable(JWebglEnum.EnableCap.DEPTH_TEST);
+    }
     onDraw() {
         this.program.u_ViewMatrix.fillByMat4(this.viewMat4);
         this.program.u_ModelMatrix.fillByMat4(this.modelMat4);
