@@ -42,6 +42,14 @@ abstract class JWebglDemoInstance {
     abstract getName ();
 
     /**
+     * 获取描述
+     * @returns 
+     */
+    onGetInfo () {
+        return this.getName ();
+    }
+
+    /**
      * 获取画布尺寸
      * @returns 
      */

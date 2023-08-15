@@ -76,4 +76,8 @@ export default class JWebglStatusFinished extends JWebglStatus {
         this.relWebgl.ctx.clear (JWebglEnum.ClearMask.COLOR_BUFFER_BIT | JWebglEnum.ClearMask.DEPTH_BUFFER_BIT);
         this.relWebgl.currentDemo.inst.onDraw ();
     }
+
+    onGetInfo (): string {
+        return this.relWebgl.currentDemo.inst.onGetInfo ();
+    }
 }

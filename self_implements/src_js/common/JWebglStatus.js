@@ -26,4 +26,10 @@ export default class JWebglStatus {
      */
     onRefresh() {
     }
+    /**
+     * 获取描述
+     */
+    onGetInfo() {
+        return ``;
+    }
 }

@@ -22,6 +22,7 @@ class DomDefine {
     DomDefine.STYLE_DISPLAY_NONE = "none";
     DomDefine.STYLE_FLEX_DIRECTION = "flexDirection";
     DomDefine.STYLE_FLEX_DIRECTION_COLUMN = "column";
+    DomDefine.STYLE_FLEX_DIRECTION_ROW = "row";
     DomDefine.STYLE_FLEX_GROW = "flexGrow";
     DomDefine.STYLE_BACKGROUND_COLOR = "backgroundColor";
     DomDefine.STYLE_MARGIN = "margin";
@@ -53,22 +54,22 @@ class DomDefine {
     /**
      * 外边距 - 数字形式
      */
-    const CONFIG_NUMBER_SPACING = 8;
+    DomDefine.CONFIG_NUMBER_SPACING = 8;
     /**
      * 外边距 - 文本形式
      */
-    DomDefine.CONFIG_TXT_SPACING = `${CONFIG_NUMBER_SPACING}px`;
+    DomDefine.CONFIG_TXT_SPACING = `${DomDefine.CONFIG_NUMBER_SPACING}px`;
     /**
      * 外边距 - 一半
      */
-    DomDefine.CONFIG_TXT_HALF_SPACING = `${CONFIG_NUMBER_SPACING / 2}px`;
+    DomDefine.CONFIG_TXT_HALF_SPACING = `${DomDefine.CONFIG_NUMBER_SPACING / 2}px`;
     /**
      * 外边距 - 2 倍
      */
-    DomDefine.CONFIG_TXT_DOUBLE_SPACING = `${CONFIG_NUMBER_SPACING * 2}px`;
+    DomDefine.CONFIG_TXT_DOUBLE_SPACING = `${DomDefine.CONFIG_NUMBER_SPACING * 2}px`;
     /**
      * 分块的背景颜色
      */
-    DomDefine.CONFIG_TXT_BG_COLOR = "#00000008";
+    DomDefine.CONFIG_TXT_BG_COLOR = "#0000000A";
 })(DomDefine || (DomDefine = {}));
 export default DomDefine;

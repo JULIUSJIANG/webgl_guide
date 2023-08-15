@@ -28,6 +28,7 @@ namespace DomDefine {
 
     export const STYLE_FLEX_DIRECTION = "flexDirection";
     export const STYLE_FLEX_DIRECTION_COLUMN = "column";
+    export const STYLE_FLEX_DIRECTION_ROW = "row";
 
     export const STYLE_FLEX_GROW = "flexGrow";
 
@@ -71,7 +72,7 @@ namespace DomDefine {
     /**
      * 外边距 - 数字形式
      */
-    const CONFIG_NUMBER_SPACING = 8;
+    export const CONFIG_NUMBER_SPACING = 8;
     /**
      * 外边距 - 文本形式
      */
@@ -87,7 +88,7 @@ namespace DomDefine {
     /**
      * 分块的背景颜色
      */
-    export const CONFIG_TXT_BG_COLOR = "#00000008";
+    export const CONFIG_TXT_BG_COLOR = "#0000000A";
 }
 
 export default DomDefine;

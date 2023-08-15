@@ -19,6 +19,13 @@ class JWebglDemoInstance {
         return program;
     }
     /**
+     * 获取描述
+     * @returns
+     */
+    onGetInfo() {
+        return this.getName();
+    }
+    /**
      * 获取画布尺寸
      * @returns
      */
