@@ -14,12 +14,10 @@
 
 
 ## 注意事项
-* 工程针对书本中出现的重要案例均写了对应的类，类名为在书中出现的页数及其简单描述
-
-* 所有的案例类均置于文件目录 webgl_guide/self_implements/src_ts/demo/ 底下，这也是最值得关注的目录
+* 工程针对书本中出现的重要案例均写了对应的类，类名为在书中出现的页数及其简单描述，并且所有的案例类均置于文件目录 webgl_guide/self_implements/src_ts/demo/ 底下，即这是最值得关注的目录
 <img width="436" alt="1692136860771" src="https://github.com/JULIUSJIANG/webgl_guide/assets/33363444/5e638156-a40c-4186-914a-4f81a990fb1b">
 
-* 看到代码 MgrData.inst.dataVersion++，可以简单地认为整个画面即将全部刷新，包含 react 以及 webgl
+* 看到代码 MgrData.inst.dataVersion++，可以简单地认为整个画面即将全部刷新，包含 react 以及 webgl 的内容
 
 * h5_preview 中的 src_ts 与 self_implements 中的 src_ts 核心逻辑一致，主要差异在于：
   
