@@ -1,4 +1,4 @@
-import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
+import JWebglAssetsStatus from "./JWebglAssetsStatus";
 
 /**
  * 资源数据 - 状态 - 加载中

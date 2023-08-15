@@ -1,17 +1,17 @@
-import JWebgl from "./common/JWebgl.js";
+import JWebgl from "./common/JWebgl";
 
 /**
  * 案例的全局共享内容
  */
 class IndexGlobal {
-
-}
-
-namespace IndexGlobal {
     /**
      * 上下文 - webgl
      */
-    export let webgl: JWebgl;
+    static webgl: JWebgl;
+}
+
+namespace IndexGlobal {
+    
 }
 
 export default IndexGlobal;

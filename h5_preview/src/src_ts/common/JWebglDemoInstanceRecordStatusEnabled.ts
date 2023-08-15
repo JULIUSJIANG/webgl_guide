@@ -1,5 +1,5 @@
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglDemoInstanceRecordStatus from "./JWebglDemoInstanceRecordStatus.js";
+import IndexGlobal from "../IndexGlobal";
+import JWebglDemoInstanceRecordStatus from "./JWebglDemoInstanceRecordStatus";
 
 /**
  * 案例对象的实例 - 状态 - 已启用

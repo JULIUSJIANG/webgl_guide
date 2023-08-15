@@ -1,10 +1,10 @@
-import JWebglEnum from "../common/JWebglEnum.js";
-import JWebglProgram from "../common/JWebglProgram.js";
-import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4.js";
-import JWebglProgramUniformFloat from "../common/JWebglProgramUniformFloat.js";
-import JWebglProgramUniformMat4 from "../common/JWebglProgramUniformMat4.js";
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
+import JWebglEnum from "../common/JWebglEnum";
+import JWebglProgram from "../common/JWebglProgram";
+import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4";
+import JWebglProgramUniformFloat from "../common/JWebglProgramUniformFloat";
+import JWebglProgramUniformMat4 from "../common/JWebglProgramUniformMat4";
+import IndexGlobal from "../IndexGlobal";
+import JWebglDemoInstance from "../common/JWebglDemoInstance";
 
 class Program extends JWebglProgram {
 

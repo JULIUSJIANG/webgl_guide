@@ -1,5 +1,5 @@
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
+import IndexGlobal from "../IndexGlobal";
+import JWebglDemoInstance from "../common/JWebglDemoInstance";
 
 /**
  * 清空画布

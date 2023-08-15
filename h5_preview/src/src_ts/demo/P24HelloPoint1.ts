@@ -1,7 +1,7 @@
-import JWebglEnum from "../common/JWebglEnum.js";
-import JWebglProgram from "../common/JWebglProgram.js";
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
+import JWebglEnum from "../common/JWebglEnum";
+import JWebglProgram from "../common/JWebglProgram";
+import IndexGlobal from "../IndexGlobal";
+import JWebglDemoInstance from "../common/JWebglDemoInstance";
 
 /**
  * 着色程序

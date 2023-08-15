@@ -1,5 +1,5 @@
-import JWebglVector3 from "./JWebglVector3.js";
-import JWebglVector4 from "./JWebglVector4.js";
+import JWebglVector3 from "./JWebglVector3";
+import JWebglVector4 from "./JWebglVector4";
 
 const DATA_LENGTH = 16;
 

@@ -1,4 +1,4 @@
-import JWebglStatus from "./JWebglStatus.js";
+import JWebglStatus from "./JWebglStatus";
 
 /**
  * 示例的执行环境 - 状态 - 加载中

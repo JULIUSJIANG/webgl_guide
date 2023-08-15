@@ -1,5 +1,5 @@
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglProgramUniform from "./JWebglProgramUniform.js";
+import IndexGlobal from "../IndexGlobal";
+import JWebglProgramUniform from "./JWebglProgramUniform";
 
 /**
  * 顶点数据 - 3 维数据

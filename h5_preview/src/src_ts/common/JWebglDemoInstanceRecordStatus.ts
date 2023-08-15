@@ -1,4 +1,4 @@
-import JWebglDemoInstanceRecord from "./JWebglDemoInstanceRecord.js";
+import JWebglDemoInstanceRecord from "./JWebglDemoInstanceRecord";
 
 /**
  * 案例对象的实例 - 状态

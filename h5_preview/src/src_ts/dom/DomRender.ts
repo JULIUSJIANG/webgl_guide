@@ -1,5 +1,5 @@
-import NodeModules from "../NodeModules.js";
-import DomRoot from "./DomRoot.js";
+import NodeModules from "../NodeModules";
+import DomRoot from "./DomRoot";
 
 /**
  * 渲染管理器
@@ -15,7 +15,7 @@ class DomRender {
      * @returns 
      */
     init () {
-        this._root = NodeModules.reactDomClient.createRoot (document.getElementById('app'));
+        this._root = NodeModules.createRoot (document.getElementById('app'));
         return Promise.resolve ();
     }
 

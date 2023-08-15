@@ -1,5 +1,5 @@
-import MgrSdkCore from "./MgrSdkCore.js";
-import MgrsdkcoreH5 from "./MgrSdkCoreH5.js";
+import MgrSdkCore from "./MgrSdkCore";
+import MgrsdkcoreH5 from "./MgrSdkCoreH5";
 
 /**
  * 针对不同运行环境做兼容处理

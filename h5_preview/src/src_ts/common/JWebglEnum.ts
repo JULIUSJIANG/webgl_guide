@@ -1,9 +1,8 @@
-import JWebglDefine from "./JWebglDefine.js";
+import JWebglDefine from "./JWebglDefine";
 
 /**
  * 其实就是 JWebglDefine 基础上的分类
  */
-JWebglDefine.POLYGON_OFFSET_FILL
 namespace JWebglEnum {
     /**
      * 深度缓冲区的绑定

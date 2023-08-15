@@ -1,5 +1,5 @@
-import MgrDataItem from "./MgrDataItem.js";
-import MgrSdk from "../mgr_sdk/MgrSdk.js";
+import MgrDataItem from "./MgrDataItem";
+import MgrSdk from "../mgr_sdk/MgrSdk";
 
 /**
  * 数据管理

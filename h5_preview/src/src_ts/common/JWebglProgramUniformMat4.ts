@@ -1,6 +1,6 @@
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglMatrix4 from "./JWebglMatrix4.js";
-import JWebglProgramUniform from "./JWebglProgramUniform.js";
+import IndexGlobal from "../IndexGlobal";
+import JWebglMatrix4 from "./JWebglMatrix4";
+import JWebglProgramUniform from "./JWebglProgramUniform";
 
 /**
  * 顶点数据 - 4 维数据

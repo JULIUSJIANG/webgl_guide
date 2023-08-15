@@ -1,8 +1,8 @@
-import JWebgl from "./JWebgl.js";
-import JWebglDemoInstance from "./JWebglDemoInstance.js";
-import JWebglDemoInstanceRecordStatus from "./JWebglDemoInstanceRecordStatus.js";
-import JWebglDemoInstanceRecordStatusDisabled from "./JWebglDemoInstanceRecordStatusDisabled.js";
-import JWebglDemoInstanceRecordStatusEnabled from "./JWebglDemoInstanceRecordStatusEnabled.js";
+import JWebgl from "./JWebgl";
+import JWebglDemoInstance from "./JWebglDemoInstance";
+import JWebglDemoInstanceRecordStatus from "./JWebglDemoInstanceRecordStatus";
+import JWebglDemoInstanceRecordStatusDisabled from "./JWebglDemoInstanceRecordStatusDisabled";
+import JWebglDemoInstanceRecordStatusEnabled from "./JWebglDemoInstanceRecordStatusEnabled";
 
 /**
  * 案例对象的实例

@@ -1,6 +1,6 @@
-import NodeModules from "../NodeModules.js";
-import IndexGlobal from "../IndexGlobal.js";
-import DomDefine from "./DomDefine.js";
+import NodeModules from "../NodeModules";
+import IndexGlobal from "../IndexGlobal";
+import DomDefine from "./DomDefine";
 
 /**
  * 下边栏 - 左侧：webgl 展示
@@ -9,7 +9,7 @@ class DomBottomLeftWebgl extends NodeModules.react.Component {
     /**
      * 实例引用
      */
-    webglCanvasRef = NodeModules.react.createRef ();
+    webglCanvasRef = NodeModules.react.createRef <HTMLCanvasElement> ();
 
     componentDidMount () {
         IndexGlobal.webgl.currStatus.onCanvas (this.webglCanvasRef.current);

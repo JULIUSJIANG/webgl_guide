@@ -1,15 +1,15 @@
-import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
-import JWebglEnum from "../common/JWebglEnum.js";
-import JWebglMatrix4 from "../common/JWebglMatrix4.js";
-import JWebglProgram from "../common/JWebglProgram.js";
-import JWebglProgramAttributeVec2 from "../common/JWebglProgramAttributeVec2.js";
-import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4.js";
-import JWebglProgramUniformMat4 from "../common/JWebglProgramUniformMat4.js";
-import JWebglProgramUniformSampler2D from "../common/JWebglProgramUniformSampler2D.js";
-import JWebglProgramVaryingFloat from "../common/JWebglProgramVaryingFloat.js";
-import JWebglProgramVaryingVec2 from "../common/JWebglProgramVaryingVec2.js";
-import JWebglProgramVaryingVec4 from "../common/JWebglProgramVaryingVec4.js";
-import MgrData from "../mgr_data/MgrData.js";
+import JWebglDemoInstance from "../common/JWebglDemoInstance";
+import JWebglEnum from "../common/JWebglEnum";
+import JWebglMatrix4 from "../common/JWebglMatrix4";
+import JWebglProgram from "../common/JWebglProgram";
+import JWebglProgramAttributeVec2 from "../common/JWebglProgramAttributeVec2";
+import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4";
+import JWebglProgramUniformMat4 from "../common/JWebglProgramUniformMat4";
+import JWebglProgramUniformSampler2D from "../common/JWebglProgramUniformSampler2D";
+import JWebglProgramVaryingFloat from "../common/JWebglProgramVaryingFloat";
+import JWebglProgramVaryingVec2 from "../common/JWebglProgramVaryingVec2";
+import JWebglProgramVaryingVec4 from "../common/JWebglProgramVaryingVec4";
+import MgrData from "../mgr_data/MgrData";
 
 class ProgramA extends JWebglProgram {
 

@@ -1,5 +1,5 @@
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglProgram from "./JWebglProgram.js";
+import IndexGlobal from "../IndexGlobal";
+import JWebglProgram from "./JWebglProgram";
 
 
 /**

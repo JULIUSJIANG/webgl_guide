@@ -1,5 +1,5 @@
-import JWebglEnum from "./JWebglEnum.js";
-import JWebglProgramAttribute from "./JWebglProgramAttribute.js";
+import JWebglEnum from "./JWebglEnum";
+import JWebglProgramAttribute from "./JWebglProgramAttribute";
 
 /**
  * 顶点数据 - 1 维数据

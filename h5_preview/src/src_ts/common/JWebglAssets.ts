@@ -1,7 +1,7 @@
-import JWebgl from "./JWebgl.js";
-import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
-import JWebglAssetsStatusFinished from "./JWebglAssetsStatusFinished.js";
-import JWebglAssetsStatusLoading from "./JWebglAssetsStatusLoading.js";
+import JWebgl from "./JWebgl";
+import JWebglAssetsStatus from "./JWebglAssetsStatus";
+import JWebglAssetsStatusFinished from "./JWebglAssetsStatusFinished";
+import JWebglAssetsStatusLoading from "./JWebglAssetsStatusLoading";
 
 /**
  * 资源数据

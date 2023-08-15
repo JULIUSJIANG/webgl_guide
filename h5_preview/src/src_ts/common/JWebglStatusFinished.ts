@@ -1,7 +1,7 @@
-import MgrData from "../mgr_data/MgrData.js";
-import MgrDataItem from "../mgr_data/MgrDataItem.js";
-import JWebglEnum from "./JWebglEnum.js";
-import JWebglStatus from "./JWebglStatus.js";
+import MgrData from "../mgr_data/MgrData";
+import MgrDataItem from "../mgr_data/MgrDataItem";
+import JWebglEnum from "./JWebglEnum";
+import JWebglStatus from "./JWebglStatus";
 
 /**
  * 示例的执行环境 - 状态 - 加载完成

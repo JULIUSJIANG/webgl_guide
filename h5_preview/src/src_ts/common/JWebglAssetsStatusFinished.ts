@@ -1,5 +1,5 @@
-import MgrData from "../mgr_data/MgrData.js";
-import JWebglAssetsStatus from "./JWebglAssetsStatus.js";
+import MgrData from "../mgr_data/MgrData";
+import JWebglAssetsStatus from "./JWebglAssetsStatus";
 
 /**
  * 资源数据 - 状态 - 加载完成

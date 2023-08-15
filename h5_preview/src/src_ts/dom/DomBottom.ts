@@ -1,7 +1,7 @@
-import NodeModules from "../NodeModules.js";
-import DomDefine from "./DomDefine.js";
-import DomBottomLeftWebgl from "./DomBottomLeftWebgl.js";
-import DomBottomRightTxt from "./DomBottomRightTxt.js";
+import NodeModules from "../NodeModules";
+import DomDefine from "./DomDefine";
+import DomBottomLeftWebgl from "./DomBottomLeftWebgl";
+import DomBottomRightTxt from "./DomBottomRightTxt";
 
 /**
  * 下边栏

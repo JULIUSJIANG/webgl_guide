@@ -1,4 +1,4 @@
-import JWebglProgramVarying from "./JWebglProgramVarying.js";
+import JWebglProgramVarying from "./JWebglProgramVarying";
 
 /**
  * 着色器的固定数据 - 浮点数

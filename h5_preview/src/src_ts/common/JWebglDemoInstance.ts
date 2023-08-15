@@ -1,6 +1,6 @@
-import JWebgl from "./JWebgl.js";
-import JWebglProgram from "./JWebglProgram.js";
-import IndexGlobal from "../IndexGlobal.js";
+import JWebgl from "./JWebgl";
+import JWebglProgram from "./JWebglProgram";
+import IndexGlobal from "../IndexGlobal";
 
 const SIZE = [400, 400];
 

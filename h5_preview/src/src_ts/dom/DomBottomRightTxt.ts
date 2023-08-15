@@ -1,6 +1,6 @@
-import IndexGlobal from "../IndexGlobal.js";
-import NodeModules from "../NodeModules.js";
-import DomDefine from "./DomDefine.js";
+import IndexGlobal from "../IndexGlobal";
+import NodeModules from "../NodeModules";
+import DomDefine from "./DomDefine";
 
 /**
  * 下边栏 - 右侧：文本展示

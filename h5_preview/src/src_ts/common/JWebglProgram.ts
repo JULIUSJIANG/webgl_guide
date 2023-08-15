@@ -1,8 +1,8 @@
-import JWebgl from "./JWebgl.js";
-import JWebglEnum from "./JWebglEnum.js";
-import JWebglProgramAttribute from "./JWebglProgramAttribute.js";
-import JWebglProgramUniform from "./JWebglProgramUniform.js";
-import JWebglProgramVarying from "./JWebglProgramVarying.js";
+import JWebgl from "./JWebgl";
+import JWebglEnum from "./JWebglEnum";
+import JWebglProgramAttribute from "./JWebglProgramAttribute";
+import JWebglProgramUniform from "./JWebglProgramUniform";
+import JWebglProgramVarying from "./JWebglProgramVarying";
 
 /**
  * 着色器程序
@@ -94,21 +94,20 @@ abstract class JWebglProgram {
                 name: propsName,
                 idx: this.attTotalSize
             });
-            this.attTotalSize += attribute.onGetSize ();
-            this [propsName] = attribute;
-            this._listAtt.push (this [propsName]);
-            
+            this._listAtt.push (attribute);
+            this.Set (propsName, attribute);
             let define = `attribute ${attribute.onGetDefine()} ${attribute};`;
             this._listVertexHead.push (define);
+            this.attTotalSize += attribute.onGetSize ();
+            console.log (`A this`, this);
         });
         symbolCache.mapKeyNameToUniformClass.forEach ((attClass, propsName) => {
             let uniform: JWebglProgramUniform = new (attClass as any) ({
                 program: this,
                 name: propsName
             });
-            this [propsName] = uniform;
-            this._listUniform.push (this [propsName]);
-
+            this._listUniform.push (uniform);
+            this.Set (propsName, uniform);
             let define = `uniform ${uniform.onGetDefine()} ${uniform};`;
             this._listVertexHead.push (define);
             this._listFragmentHead.push (define);
@@ -118,9 +117,8 @@ abstract class JWebglProgram {
                 program: this,
                 name: propsName
             });
-            this [propsName] = varying;
             this._listVarying.push (varying);
-
+            this.Set (propsName, varying);
             let define = `varying ${varying.onGetDefine()} ${varying};`;
             this._listVertexHead.push (define);
             this._listFragmentHead.push (define);
@@ -157,6 +155,10 @@ abstract class JWebglProgram {
             let uniformI = this._listUniform [i];
             uniformI._onProgramReady ();
         };
+    }
+
+    Set (propsKey: string, propsVal: any) {
+        this [propsKey] = propsVal;
     }
 
     /**
@@ -297,7 +299,9 @@ namespace JWebglProgram {
      * @returns 
      */
     export function attribute <T extends typeof JWebglProgramAttribute> (t: T) {
+        // console.log (`attribute a`)
         return function decorator (inst: JWebglProgram, propsName: string) {
+            // console.log (`attribute b`, inst);
             let cache = getCache (inst);
             cache.mapKeyNameToAttributeClass.set (propsName, t);
         };

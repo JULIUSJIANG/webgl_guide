@@ -1,5 +1,5 @@
-import JWebglEnum from "./JWebglEnum.js";
-import JWebglProgram from "./JWebglProgram.js";
+import JWebglEnum from "./JWebglEnum";
+import JWebglProgram from "./JWebglProgram";
 
 /**
  * 着色器的顶点数据

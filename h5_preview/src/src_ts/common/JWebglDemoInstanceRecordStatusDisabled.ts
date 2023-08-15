@@ -1,4 +1,4 @@
-import JWebglDemoInstanceRecordStatus from "./JWebglDemoInstanceRecordStatus.js";
+import JWebglDemoInstanceRecordStatus from "./JWebglDemoInstanceRecordStatus";
 
 /**
  * 案例对象的实例 - 状态 - 未启用

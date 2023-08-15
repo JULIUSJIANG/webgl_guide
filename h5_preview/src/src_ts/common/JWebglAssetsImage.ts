@@ -1,6 +1,6 @@
-import JWebgl from "./JWebgl.js";
-import JWebglAssets from "./JWebglAssets.js";
-import JWebglEnum from "./JWebglEnum.js";
+import JWebgl from "./JWebgl";
+import JWebglAssets from "./JWebglAssets";
+import JWebglEnum from "./JWebglEnum";
 
 /**
  * 资源数据 - 图片

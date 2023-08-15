@@ -1,4 +1,4 @@
-import JWebglProgram from "./JWebglProgram.js";
+import JWebglProgram from "./JWebglProgram";
 
 /**
  * 着色器的固定数据

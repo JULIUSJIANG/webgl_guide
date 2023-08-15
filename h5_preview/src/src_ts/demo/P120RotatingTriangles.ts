@@ -1,13 +1,13 @@
 import { join } from "path";
-import JWebglEnum from "../common/JWebglEnum.js";
-import JWebglMatrix4 from "../common/JWebglMatrix4.js";
-import JWebglProgram from "../common/JWebglProgram.js";
-import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4.js";
-import JWebglProgramUniformFloat from "../common/JWebglProgramUniformFloat.js";
-import JWebglProgramUniformMat4 from "../common/JWebglProgramUniformMat4.js";
-import IndexGlobal from "../IndexGlobal.js";
-import JWebglDemoInstance from "../common/JWebglDemoInstance.js";
-import MgrData from "../mgr_data/MgrData.js";
+import JWebglEnum from "../common/JWebglEnum";
+import JWebglMatrix4 from "../common/JWebglMatrix4";
+import JWebglProgram from "../common/JWebglProgram";
+import JWebglProgramAttributeVec4 from "../common/JWebglProgramAttributeVec4";
+import JWebglProgramUniformFloat from "../common/JWebglProgramUniformFloat";
+import JWebglProgramUniformMat4 from "../common/JWebglProgramUniformMat4";
+import IndexGlobal from "../IndexGlobal";
+import JWebglDemoInstance from "../common/JWebglDemoInstance";
+import MgrData from "../mgr_data/MgrData";
 
 class Program extends JWebglProgram {
 

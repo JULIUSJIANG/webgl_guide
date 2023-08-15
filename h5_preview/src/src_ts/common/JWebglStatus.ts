@@ -1,4 +1,4 @@
-import JWebgl from "./JWebgl.js";
+import JWebgl from "./JWebgl";
 
 /**
  * 示例的执行环境 - 状态

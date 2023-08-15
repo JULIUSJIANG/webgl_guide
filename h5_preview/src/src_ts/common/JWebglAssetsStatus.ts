@@ -1,4 +1,4 @@
-import JWebglAssets from "./JWebglAssets.js";
+import JWebglAssets from "./JWebglAssets";
 
 /**
  * 资源数据 - 状态

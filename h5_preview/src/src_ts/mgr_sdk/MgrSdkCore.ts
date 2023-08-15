@@ -1,7 +1,7 @@
-import MgrSdkCtxGet from "./MgrSdkCtxGet.js";
-import MgrSdkCtxSet from "./MgrSdkCtxSet.js";
-import MgrSdkCtxLogToMain from "./MgrSdkCtxLogToMain.js";
-import MgrSdkCtxSaveFile from "./MgrSdkCtxSaveFile.js";
+import MgrSdkCtxGet from "./MgrSdkCtxGet";
+import MgrSdkCtxSet from "./MgrSdkCtxSet";
+import MgrSdkCtxLogToMain from "./MgrSdkCtxLogToMain";
+import MgrSdkCtxSaveFile from "./MgrSdkCtxSaveFile";
 
 /**
  * 针对不同运行环境做兼容处理 - 策略

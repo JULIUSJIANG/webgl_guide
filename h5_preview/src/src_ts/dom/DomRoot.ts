@@ -1,7 +1,7 @@
-import NodeModules from "../NodeModules.js";
-import DomDefine from "./DomDefine.js";
-import DomBottom from "./DomBottom.js";
-import DomTop from "./DomTop.js";
+import NodeModules from "../NodeModules";
+import DomDefine from "./DomDefine";
+import DomBottom from "./DomBottom";
+import DomTop from "./DomTop";
 
 /**
  * 根
@@ -11,15 +11,11 @@ class DomRoot extends NodeModules.react.Component {
     /**
      * 实体的引用
      */
-    inputRef = NodeModules.react.createRef();
+    inputRef = NodeModules.react.createRef <HTMLInputElement> ();
     /**
      * 输入框标签对象
      */
     tagInput: HTMLInputElement;
-
-    constructor (...args) {
-        super (...args);
-    }
 
     /**
      * 组件被挂载

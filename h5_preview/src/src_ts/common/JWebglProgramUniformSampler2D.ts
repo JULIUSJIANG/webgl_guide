@@ -1,5 +1,5 @@
-import JWebglEnum from "./JWebglEnum.js";
-import JWebglProgramUniform from "./JWebglProgramUniform.js";
+import JWebglEnum from "./JWebglEnum";
+import JWebglProgramUniform from "./JWebglProgramUniform";
 
 /**
  * 顶点数据 - 纹理

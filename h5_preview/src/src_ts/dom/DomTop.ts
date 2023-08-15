@@ -1,8 +1,8 @@
-import IndexGlobal from "../IndexGlobal.js";
-import NodeModules from "../NodeModules.js";
-import MgrData from "../mgr_data/MgrData.js";
-import MgrDataItem from "../mgr_data/MgrDataItem.js";
-import DomDefine from "./DomDefine.js";
+import IndexGlobal from "../IndexGlobal";
+import NodeModules from "../NodeModules";
+import MgrData from "../mgr_data/MgrData";
+import MgrDataItem from "../mgr_data/MgrDataItem";
+import DomDefine from "./DomDefine";
 
 /**
  * 列数
